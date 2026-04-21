@@ -84,12 +84,11 @@ nav a:hover { color: var(--secondary); }
     
     /* A MÁGICA ESTÁ AQUI: */
     background-image: linear-gradient(rgba(10, 36, 99, 0.6), rgba(10, 36, 99, 0.6)), 
-                      url('../img/planoDeFundo1.jpeg'); 
+                      url('../img/planoDeFundo2.webp'); /* Foto de fundo */
     
     background-size: cover;      /* Faz a imagem cobrir todo o espaço sem sobrar branco */
-    background-position: center; /* Garante que o centro da foto sempre apareça */
-    background-attachment: fixed; /* Efeito 'Parallax': a foto fica parada enquanto o site rola */
-    
+    background-position: center 60%; /* Garante que o centro da foto sempre apareça */
+    height: 100vh;
     color: white;
     padding-top: 80px; /* Espaço para não ficar debaixo do menu fixo */
 }
