@@ -1,6 +1,6 @@
-// ============================================
-// SWIPER - Carrossel de Estoque
-// ============================================
+// =============================================
+// SWIPER — Carrossel de Estoque
+// =============================================
 
 const swiper = new Swiper('.meuCarrossel', {
     slidesPerView: 1,
@@ -21,14 +21,14 @@ const swiper = new Swiper('.meuCarrossel', {
         },
         968: {
             slidesPerView: 3,
-            spaceBetween: 30,
+            spaceBetween: 28,
         }
     }
 });
 
-// ============================================
-// SCROLL SUAVE para links de âncora
-// ============================================
+// =============================================
+// SCROLL SUAVE com offset do header
+// =============================================
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -38,18 +38,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = document.querySelector(targetId);
         if (target) {
             e.preventDefault();
-            const offset = 85; // altura do header fixo
+            const offset = 75;
             const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
             window.scrollTo({ top, behavior: 'smooth' });
         }
     });
 });
 
-// ============================================
-// ANO ATUAL no footer
-// ============================================
+// =============================================
+// HEADER — destaca link ativo no scroll
+// =============================================
 
-const yearEl = document.getElementById('currentYear');
-if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-}
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            navLinks.forEach(link => {
+                link.style.color = '';
+                if (link.getAttribute('href') === '#' + entry.target.id) {
+                    link.style.color = 'var(--secondary)';
+                }
+            });
+        }
+    });
+}, { rootMargin: '-50% 0px -50% 0px' });
+
+sections.forEach(section => observer.observe(section));
