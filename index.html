@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DM Motos | Compra, Venda e Financiamento em Aparecida de Goiânia</title>
-    <meta name="description" content="DM Motos — compra, venda, troca e financiamento de motos em Aparecida de Goiânia. Aprovação rápida, financiamento para negativados!">
+    <title>DM Motos | Em breve as melhores ofertas!</title>
+    <meta name="description" content="Estamos preparando o melhor estoque de motos de Aparecida de Goiânia. 95% concluído!">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,570 +13,134 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <link rel="icon" type="image/png" href="assets/img/dmlogo.png">
-    <link rel="apple-touch-icon" href="assets/img/dmlogo.png">
-    <link rel="shortcut icon" href="assets/img/dmlogo.png" type="image/x-icon">
+    
+    <style>
+        /* CSS Adicional para o modo Produção */
+        .maintenance-tag {
+            background: #d50000;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .progress-container {
+            width: 100%;
+            max-width: 400px;
+            background: rgba(255,255,255,0.1);
+            height: 10px;
+            border-radius: 10px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        .progress-bar {
+            width: 95%;
+            height: 100%;
+            background: #16a34a;
+            box-shadow: 0 0 15px rgba(22,163,74,0.5);
+        }
+        .coming-soon-note {
+            font-style: italic;
+            opacity: 0.8;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- =============================================
-         HEADER
-         ============================================= -->
     <header>
         <div class="header-container">
             <div class="logo">
                 <img src="assets/img/dmlogo.png" alt="DM Motos" class="logo-img">
             </div>
-
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-
-            <nav id="mainNav" role="navigation">
+            <nav id="mainNav">
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#estoque">Estoque</a></li>
-                    <li><a href="#financiamento">Financiamento</a></li>
-                    <li><a href="#compraprogramada">Consórcio</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- =============================================
-         HERO
-         ============================================= -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <div class="hero-badge">
-                <span class="dot"></span>
-                Atendimento disponível agora
+            <div class="maintenance-tag">Site em Produção</div>
+            
+            <h1>O MELHOR ESTOQUE ESTÁ <span>CHEGANDO</span></h1>
+
+            <p class="hero-sub">Estamos finalizando os últimos detalhes para apresentar as <strong>melhores ofertas da região</strong> de Aparecida de Goiânia.</p>
+
+            <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                <span style="font-weight: bold; color: #fff;">95% Completo</span>
+                <div class="progress-container">
+                    <div class="progress-bar"></div>
+                </div>
             </div>
 
-            <h1>SAIA HOJE<br>DE MOTO <span>SEM BUROCRACIA</span></h1>
+            <p class="coming-soon-note">Nossos sistemas de financiamento e catálogo estarão disponíveis em instantes.</p>
 
-            <p class="hero-sub">Escolha sua moto e já saia rodando com aprovação rápida.</p>
-
-            <span class="hero-negativado">
-                <i class="fas fa-check-circle" style="margin-right:5px;"></i>
-                Financiamento para negativados!
-            </span>
-
-            <div class="hero-buttons">
+            <div class="hero-buttons" style="margin-top: 30px;">
                 <a href="https://wa.me/5562981770452" target="_blank" class="btn btn-primary">
                     <i class="fab fa-whatsapp"></i>
-                    FALAR NO WHATSAPP
-                </a>
-                <a href="#estoque" class="btn btn-secondary">
-                    <i class="fas fa-motorcycle"></i>
-                    VER ESTOQUE
+                    SOLICITAR TABELA PELO WHATSAPP
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- =============================================
-         SERVIÇOS
-         ============================================= -->
-    <section id="servicos" class="servicos-section">
-        <div class="container">
-            <p class="section-label">O que fazemos</p>
-            <h2 class="section-title">Nossos Serviços</h2>
-            <p class="section-subtitle">Soluções completas para você e sua moto</p>
-
-            <div class="servicos-grid">
-
-                <div class="servico-card">
-                    <div class="servico-icon-wrap azul">
-                        <i class="fas fa-motorcycle" style="color:#0a2463;"></i>
-                    </div>
-                    <h3>Compra de Motos</h3>
-                    <p>Seleção exclusiva de motos premium, todas revisadas e garantidas.</p>
-                    <ul class="servico-list">
-                        <li><span class="check-icon"><i class="fas fa-check" style="font-size:0.6rem;"></i></span>Laudo cautelar incluso</li>
-                        <li><span class="check-icon"><i class="fas fa-check" style="font-size:0.6rem;"></i></span>Garantia de 90 dias</li>
-                        <li><span class="check-icon"><i class="fas fa-check" style="font-size:0.6rem;"></i></span>Documentação em dia</li>
-                    </ul>
-                    <a href="#estoque" class="btn btn-outline">
-                        <i class="fas fa-search"></i> Ver Estoque
-                    </a>
-                </div>
-
-                <div class="servico-card">
-                    <div class="servico-icon-wrap vermelho">
-                        <i class="fas fa-hand-holding-dollar" style="color:#d50000;"></i>
-                    </div>
-                    <h3>Venda sua Moto</h3>
-                    <p>Avaliamos e compramos sua moto à vista pelo melhor preço do mercado.</p>
-                    <ul class="servico-list">
-                        <li><span class="check-icon"><i class="fas fa-check" style="font-size:0.6rem;"></i></span>Avaliação em até 1h</li>
-                        <li><span class="check-icon"><i class="fas fa-check" style="font-size:0.6rem;"></i></span>Pagamento imediato</li>
-                        <li><span class="check-icon"><i class="fas fa-check" style="font-size:0.6rem;"></i></span>Sem burocracia</li>
-                    </ul>
-                    <a href="https://wa.me/5562981770452" target="_blank" class="btn btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i> Solicitar Avaliação
-                    </a>
-                </div>
-
-                <div class="servico-card">
-                    <div class="servico-icon-wrap verde">
-                        <i class="fas fa-handshake" style="color:#16a34a;"></i>
-                    </div>
-                    <h3>Consignação</h3>
-                    <p>Vendemos sua moto pelo melhor preço, com total segurança e transparência.</p>
-                    <ul class="servico-list">
-                        <li><span class="check-icon"><i class="fas fa-check" style="font-size:0.6rem;"></i></span>Divulgação premium</li>
-                        <li><span class="check-icon"><i class="fas fa-check" style="font-size:0.6rem;"></i></span>Fotografia profissional</li>
-                        <li><span class="check-icon"><i class="fas fa-check" style="font-size:0.6rem;"></i></span>Negociação especializada</li>
-                    </ul>
-                    <a href="https://wa.me/5562981770452" target="_blank" class="btn btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i> Saiba Mais
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- =============================================
-         ESTOQUE
-         ============================================= -->
-    <section id="estoque" class="estoque-section">
-        <div class="container">
-            <p class="section-label">Disponível agora</p>
-            <h2 class="section-title">Nosso Estoque</h2>
-            <p class="section-subtitle">As melhores oportunidades da região</p>
-
-            <div class="swiper meuCarrossel">
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                        <div class="moto-card">
-                            <img src="assets/img/fazer-250-1.jpg" alt="Yamaha FZ25 Fazer 250">
-                            <div class="moto-info">
-                                <span class="moto-badge">Seminova</span>
-                                <h3>Yamaha FZ25 Fazer</h3>
-                                <p class="ano-km"><i class="fas fa-calendar-alt" style="margin-right:4px; opacity:0.6;"></i>2023 &nbsp;•&nbsp; <i class="fas fa-road" style="margin-right:4px; opacity:0.6;"></i>15.000 km</p>
-                                <p class="preco">R$ 21.500</p>
-                                <a href="https://wa.me/5562981770452" target="_blank" class="btn btn-primary btn-block">
-                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="moto-card">
-                            <img src="assets/img/fan160.webp" alt="Honda CG 160 Fan">
-                            <div class="moto-info">
-                                <span class="moto-badge" style="background:rgba(22,163,74,0.1);color:#16a34a;">0 km</span>
-                                <h3>Honda CG 160 Fan</h3>
-                                <p class="ano-km"><i class="fas fa-calendar-alt" style="margin-right:4px; opacity:0.6;"></i>2024 &nbsp;•&nbsp; <i class="fas fa-road" style="margin-right:4px; opacity:0.6;"></i>0 km</p>
-                                <p class="preco">R$ 18.900</p>
-                                <a href="https://wa.me/5562981770452" target="_blank" class="btn btn-primary btn-block">
-                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="moto-card">
-                            <img src="assets/img/cg160-3.jpg" alt="Honda CG 160 Titan">
-                            <div class="moto-info">
-                                <span class="moto-badge">Seminova</span>
-                                <h3>Honda CG 160 Titan</h3>
-                                <p class="ano-km"><i class="fas fa-calendar-alt" style="margin-right:4px; opacity:0.6;"></i>2022 &nbsp;•&nbsp; <i class="fas fa-road" style="margin-right:4px; opacity:0.6;"></i>8.500 km</p>
-                                <p class="preco">R$ 32.900</p>
-                                <a href="https://wa.me/5562981770452" target="_blank" class="btn btn-primary btn-block">
-                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="moto-card">
-                            <img src="assets/img/lander4.jpg" alt="Yamaha XTZ 250 Lander">
-                            <div class="moto-info">
-                                <span class="moto-badge">Seminova</span>
-                                <h3>Yamaha XTZ 250 Lander</h3>
-                                <p class="ano-km"><i class="fas fa-calendar-alt" style="margin-right:4px; opacity:0.6;"></i>2021 &nbsp;•&nbsp; <i class="fas fa-road" style="margin-right:4px; opacity:0.6;"></i>25.000 km</p>
-                                <p class="preco">R$ 23.000</p>
-                                <a href="https://wa.me/5562981770452" target="_blank" class="btn btn-primary btn-block">
-                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =============================================
-         FINANCIAMENTO
-         ============================================= -->
-    <section id="financiamento" class="financiamento-section">
-        <div class="container">
-            <p class="section-label">Crédito facilitado</p>
-            <h2 class="section-title">Financiamento</h2>
-            <p class="section-subtitle">Realize seu sonho com as melhores taxas do mercado</p>
-
-            <div class="financiamento-intro">
-                <h3>Parceria com Grandes Financeiras</h3>
-                <p>Trabalhamos com 4 instituições financeiras para garantir a melhor condição para você.</p>
-            </div>
-
-            <div class="bancos-grid">
-                <div class="banco-item">
-                    <img src="assets/img/logo-santander.png" alt="Santander" class="banco-img">
-                </div>
-                <div class="banco-item">
-                    <img src="assets/img/logo-c6.jpg" alt="C6 Bank" class="banco-img">
-                </div>
-                <div class="banco-item">
-                    <img src="assets/img/logo-pan.webp" alt="Banco Pan" class="banco-img">
-                </div>
-                <div class="banco-item">
-                    <img src="assets/img/logo-bv-financeira.png" alt="BV Financeira" class="banco-img">
-                </div>
-            </div>
-
-            <div class="financiamento-tipos">
-
-                <div class="tipo-card">
-                    <div class="tipo-icon-wrap">
-                        <i class="fas fa-file-invoice-dollar" style="color:#d50000;"></i>
-                    </div>
-                    <h3>Financiamento Tradicional</h3>
-                    <p>Entrada a partir de 20% e parcelas fixas em até 60 meses.</p>
-                    <a href="https://wa.me/5562981770452" target="_blank" class="btn btn-primary">
-                        <i class="fab fa-whatsapp"></i> Simular Agora
-                    </a>
-                </div>
-
-                <div class="tipo-card">
-                    <div class="tipo-icon-wrap">
-                        <i class="fas fa-arrows-rotate" style="color:#d50000;"></i>
-                    </div>
-                    <h3>Troca com Financiamento</h3>
-                    <p>Use sua moto atual como entrada e financie o restante.</p>
-                    <a href="https://wa.me/5562981770452" target="_blank" class="btn btn-primary">
-                        <i class="fab fa-whatsapp"></i> Avaliar Troca
-                    </a>
-                </div>
-
-                <div class="tipo-card">
-                    <div class="tipo-icon-wrap">
-                        <i class="fas fa-star" style="color:#d50000;"></i>
-                    </div>
-                    <h3>Crédito DM Motos</h3>
-                    <p>Aprovação rápida e menos burocracia. Direto com a gente!</p>
-                    <a href="https://wa.me/5562981770452" target="_blank" class="btn btn-primary">
-                        <i class="fab fa-whatsapp"></i> Saber Mais
-                    </a>
-                </div>
-
-                <div class="tipo-card">
-                    <div class="tipo-icon-wrap">
-                        <i class="fas fa-receipt" style="color:#d50000;"></i>
-                    </div>
-                    <h3>Crediário Próprio</h3>
-                    <p>Entrada + parcelas mensais via carnê. Aprovação facilitada!</p>
-                    <a href="https://wa.me/5562981770452" target="_blank" class="btn btn-primary">
-                        <i class="fab fa-whatsapp"></i> Saber Mais
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- =============================================
-         COMPRA PROGRAMADA
-         ============================================= -->
-    <section id="compraprogramada" class="compra-section">
-        <div class="container">
-            <p class="section-label">Sem juros abusivos</p>
-            <h2 class="section-title">Compra Programada</h2>
-            <p class="section-subtitle">A forma mais inteligente de conquistar sua moto</p>
-
-            <div class="compra-content">
-                <div class="compra-texto">
-                    <h3>Como funciona?</h3>
-                    <p>É como um consórcio,Você programa a compra da sua moto dos sonhos pagando parcelas que cabem no seu bolso, sem juros abusivos.</p>
-
-                    <div class="vantagens-grid">
-                        <div class="vantagem-item">
-                            <div class="vantagem-icon">
-                                <i class="fas fa-percent"></i>
-                            </div>
-                            <div>
-                                <h4>Sem Juros</h4>
-                                <p>Paga apenas o valor da moto + taxa de administração</p>
-                            </div>
-                        </div>
-                        <div class="vantagem-item">
-                            <div class="vantagem-icon">
-                                <i class="fas fa-bolt"></i>
-                            </div>
-                            <div>
-                                <h4>Compra Facilitado</h4>
-                                <p>Antecipe a contemplação com lances a partir de 30%</p>
-                            </div>
-                        </div>
-                        <div class="vantagem-item">
-                            <div class="vantagem-icon">
-                                <i class="fas fa-sliders"></i>
-                            </div>
-                            <div>
-                                <h4>Plano Flexível</h4>
-                                <p>Prazos de 36 a 72 meses para pagar</p>
-                            </div>
-                        </div>
-                        <div class="vantagem-item">
-                            <div class="vantagem-icon">
-                                <i class="fas fa-calendar-check"></i>
-                            </div>
-                            <div>
-                                <h4>Assembleias Mensais</h4>
-                                <p>Sorteios e lances todo mês via live</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="compra-cta">
-                        <a href="https://wa.me/5562981770452" target="_blank" class="btn btn-primary">
-                            <i class="fab fa-whatsapp"></i> Quero Simular
-                        </a>
-                        <a href="https://wa.me/5562981770452" target="_blank" class="btn btn-outline">
-                            <i class="fas fa-users"></i> Ver...
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =============================================
-         CONTATO
-         ============================================= -->
     <section id="contato" class="contato-section">
         <div class="container">
-            <p class="section-label">Fale conosco</p>
-            <h2 class="section-title">Entre em Contato</h2>
-            <p class="section-subtitle">Estamos prontos para atender você</p>
+            <h2 class="section-title">Enquanto isso, fale conosco</h2>
+            <p class="section-subtitle">Já estamos atendendo normalmente em nossa loja física</p>
 
             <div class="contato-container">
                 <div class="contato-info">
-
                     <div class="info-card">
-                        <div class="info-icon red">
-                            <i class="fas fa-location-dot"></i>
-                        </div>
+                        <div class="info-icon red"><i class="fas fa-location-dot"></i></div>
                         <div class="info-text">
-                            <h4>Endereço</h4>
-                            <p>
-                                Av. W5 Qd 137 Lt 01<br>
-                                Sítio Santa Luzia<br>
-                                Aparecida de Goiânia – GO
-                            </p>
-                            <a href="https://www.google.com/maps/search/?api=1&query=Avenida+W5+Quadra+137+Lote+01+Sitio+Santa+Luzia+Aparecida+de+Goiania+GO+74922-685"
-                                target="_blank" class="btn-maps">
-                                <i class="fas fa-map"></i> Abrir no Google Maps
-                            </a>
+                            <h4>Visite-nos</h4>
+                            <p>Av. W5 Qd 137 Lt 01, Sítio Santa Luzia, Aparecida de Goiânia – GO</p>
                         </div>
                     </div>
 
                     <div class="info-card">
-                        <div class="info-icon green">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
+                        <div class="info-icon green"><i class="fab fa-whatsapp"></i></div>
                         <div class="info-text">
-                            <h4>WhatsApp</h4>
+                            <h4>WhatsApp Direto</h4>
                             <p><a href="tel:+5562981770452">(62) 98177-0452</a></p>
-                            <a href="https://wa.me/5562981770452" target="_blank" class="whatsapp-link">
-                                <i class="fab fa-whatsapp"></i> Chamar agora
-                            </a>
                         </div>
                     </div>
-
-                    <div class="info-card">
-                        <div class="info-icon blue">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="info-text">
-                            <h4>Horário</h4>
-                            <p>
-                                Seg a Sex: <strong>8h às 18h</strong><br>
-                                Sábado: <strong>8h às 12h</strong><br>
-                                Domingo: Fechado
-                            </p>
-                        </div>
-                    </div>
-
                 </div>
-
+                
                 <div class="contato-mapa">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.48!2d-49.276!3d-16.822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef4b100000001%3A0x1!2sAv.+Geraldo+Padeiro%2C+Aparecida+de+Goi%C3%A2nia+-+GO!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
-                        width="100%"
-                        height="420"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                    <p class="mapa-fallback">
-                        <i class="fas fa-info-circle"></i>
-                        Mapa não carregou?
-                        <a href="https://www.google.com/maps/search/?api=1&query=Avenida+Geraldo+Padeiro+Quadra+137+Lote+01+Sitio+Santa+Luzia+Aparecida+de+Goiania+GO" target="_blank">Abrir no Google Maps</a>
-                    </p>
+                    <iframe src="https://www.google.com/maps/search/?api=1&query=Avenida+W5+Quadra+137+Lote+01+Sitio+Santa+Luzia+Aparecida+de+Goiania+GO+74922-685" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- =============================================
-         FOOTER
-         ============================================= -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-
-                <div class="footer-col">
-                    <h3>DM Motos</h3>
-                    <p>Sua próxima moto está aqui. Especialistas em negociações rápidas e financiamentos facilitados em Aparecida de Goiânia. Oferecemos uma estrutura completa e atendimento personalizado para você realizar o seu sonho com segurança..</p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/dmmotos18/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://wa.me/5562981770452" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Navegação</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#servicos">Serviços</a></li>
-                        <li><a href="#estoque">Estoque</a></li>
-                        <li><a href="#financiamento">Financiamento</a></li>
-                        <li><a href="#compraprogramada">Compra Programada</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Serviços</h3>
-                    <ul class="footer-links">
-                        <li><a href="#financiamento">Financiamento de Motos</a></li>
-                        <li><a href="#servicos">Venda por Consignação</a></li>
-                        <li><a href="#estoque">Compra de Motos</a></li>
-                        <li><a href="#servicos">Troca de Motos</a></li>
-                        <li><a href="#compraprogramada">Compra Programada</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Contato</h3>
-                    <ul class="footer-links">
-                        <li>
-                            <i class="fas fa-location-dot"></i>
-                            <span>Av. Geraldo Padeiro Qd 137 Lt 01, Sítio Santa Luzia, Aparecida de Goiânia – GO</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+5562981770452">(62) 98177-0452</a>
-                        </li>
-                        <li>
-                            <i class="fab fa-whatsapp"></i>
-                            <a href="https://wa.me/5562981770452" target="_blank">(62) 98177-0452</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:dmmotos3@gmail.com">dmmotos3@gmail.com</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-clock"></i>
-                            <span>Seg–Sex: 8h–18h | Sáb: 8h–12h</span>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-
             <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> DM Motos. Todos os direitos reservados.</p>
-                <p class="disclaimer-small">
-                    Av. W5 Qd 137 Lt 01 – Sítio Santa Luzia, Aparecida de Goiânia – GO | CEP: 74922-685
-                </p>
-                <p class="disclaimer-small">
-                    *Consulte condições de financiamento. Imagens meramente ilustrativas.
-                </p>
+                <p>© <span id="currentYear"></span> DM Motos. Site em fase final de homologação.</p>
+                <p class="disclaimer-small">Aparecida de Goiânia – GO | Atendimento: (62) 98177-0452</p>
             </div>
         </div>
     </footer>
 
-    <!-- BOTÕES FLUTUANTES -->
     <div class="social-float">
-        <a href="https://wa.me/5562981770452" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp">
+        <a href="https://wa.me/5562981770452" target="_blank" class="social-icon whatsapp">
             <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://www.instagram.com/dmmotos18/" target="_blank" class="social-icon instagram" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
         </a>
     </div>
 
-    <!-- SCRIPTS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="assets/js/script.js"></script>
-
     <script>
-        // Ano atual
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Menu hamburger
-        const menuToggle = document.getElementById('menuToggle');
-        const mainNav = document.getElementById('mainNav');
-
-        menuToggle.addEventListener('click', () => {
-            const isOpen = mainNav.classList.toggle('nav-open');
-            menuToggle.classList.toggle('open', isOpen);
-            menuToggle.setAttribute('aria-expanded', isOpen);
-        });
-
-        // Fecha menu ao clicar em link
-        mainNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mainNav.classList.remove('nav-open');
-                menuToggle.classList.remove('open');
-                menuToggle.setAttribute('aria-expanded', 'false');
-            });
-        });
-
-        // Fecha menu ao clicar fora
-        document.addEventListener('click', (e) => {
-            if (!menuToggle.contains(e.target) && !mainNav.contains(e.target)) {
-                mainNav.classList.remove('nav-open');
-                menuToggle.classList.remove('open');
-                menuToggle.setAttribute('aria-expanded', 'false');
-            }
-        });
     </script>
 
 </body>
