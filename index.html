@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DM Motos | Em breve as melhores ofertas!</title>
-    <meta name="description" content="Estamos preparando o melhor estoque de motos de Aparecida de Goiânia. 95% concluído!">
+    <title>DM Motos | Compra, Venda e Financiamento em Aparecida de Goiânia</title>
+    <meta name="description" content="DM Motos — compra, venda, troca e financiamento de motos em Aparecida de Goiânia. Aprovação rápida, financiamento para negativados!">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,134 +13,1386 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <link rel="icon" type="image/png" href="assets/img/dmlogo.png">
-    
-    <style>
-        /* CSS Adicional para o modo Produção */
-        .maintenance-tag {
-            background: #d50000;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-        .progress-container {
-            width: 100%;
-            max-width: 400px;
-            background: rgba(255,255,255,0.1);
-            height: 10px;
-            border-radius: 10px;
-            margin: 20px 0;
-            overflow: hidden;
-        }
-        .progress-bar {
-            width: 95%;
-            height: 100%;
-            background: #16a34a;
-            box-shadow: 0 0 15px rgba(22,163,74,0.5);
-        }
-        .coming-soon-note {
-            font-style: italic;
-            opacity: 0.8;
-            margin-top: 10px;
-            font-size: 0.9rem;
-        }
-    </style>
+    <link rel="apple-touch-icon" href="assets/img/dmlogo.png">
+    <link rel="shortcut icon" href="assets/img/dmlogo.png" type="image/x-icon">
 </head>
 
 <body>
 
+    <!-- =============================================
+         HEADER
+         ============================================= -->
     <header>
         <div class="header-container">
             <div class="logo">
                 <img src="assets/img/dmlogo.png" alt="DM Motos" class="logo-img">
             </div>
-            <nav id="mainNav">
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav id="mainNav" role="navigation">
                 <ul>
                     <li><a href="#home">Home</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#ofertas">Ofertas</a></li>
+                    <li><a href="#estoque">Estoque</a></li>
+                    <li><a href="#financiamento">Financiamento</a></li>
+                    <li><a href="#compraprogramada">Consórcio</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- =============================================
+         HERO
+         ============================================= -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <div class="maintenance-tag">Site em Produção</div>
-            
-            <h1>O MELHOR ESTOQUE ESTÁ <span>CHEGANDO</span></h1>
-
-            <p class="hero-sub">Estamos finalizando os últimos detalhes para apresentar as <strong>melhores ofertas da região</strong> de Aparecida de Goiânia.</p>
-
-            <div style="display: flex; flex-direction: column; align-items: flex-start;">
-                <span style="font-weight: bold; color: #fff;">95% Completo</span>
-                <div class="progress-container">
-                    <div class="progress-bar"></div>
-                </div>
+            <div class="hero-badge" id="heroBadge">
+                <span class="dot" id="heroDot"></span>
+                <span id="heroStatus">Verificando horário...</span>
             </div>
 
-            <p class="coming-soon-note">Nossos sistemas de financiamento e catálogo estarão disponíveis em instantes.</p>
+            <h1>SAIA HOJE<br>DE MOTO <span>SEM BUROCRACIA</span></h1>
 
-            <div class="hero-buttons" style="margin-top: 30px;">
+            <p class="hero-sub">Escolha sua moto e já saia rodando com aprovação rápida.</p>
+
+            <span class="hero-negativado">
+                <i class="fas fa-check-circle" style="margin-right:5px;"></i>
+                Financiamento para negativados!
+            </span>
+
+            <div class="hero-buttons">
                 <a href="https://wa.me/5562981770452" target="_blank" class="btn btn-primary">
                     <i class="fab fa-whatsapp"></i>
-                    SOLICITAR TABELA PELO WHATSAPP
+                    FALAR NO WHATSAPP
+                </a>
+                <a href="#ofertas" class="btn btn-secondary">
+                    <i class="fas fa-motorcycle"></i>
+                    VER OFERTAS
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="contato" class="contato-section">
+    <!-- =============================================
+         SERVIÇOS
+         ============================================= -->
+    <section id="servicos" class="servicos-section">
         <div class="container">
-            <h2 class="section-title">Enquanto isso, fale conosco</h2>
-            <p class="section-subtitle">Já estamos atendendo normalmente em nossa loja física</p>
+            <p class="section-label">O que fazemos</p>
+            <h2 class="section-title">Nossos Serviços</h2>
+            <p class="section-subtitle">Soluções completas para você e sua moto</p>
 
-            <div class="contato-container">
-                <div class="contato-info">
-                    <div class="info-card">
-                        <div class="info-icon red"><i class="fas fa-location-dot"></i></div>
-                        <div class="info-text">
-                            <h4>Visite-nos</h4>
-                            <p>Av. W5 Qd 137 Lt 01, Sítio Santa Luzia, Aparecida de Goiânia – GO</p>
+            <div class="servicos-grid">
+
+                <div class="servico-card">
+                    <div class="servico-icon-wrap azul">
+                        <i class="fas fa-motorcycle" style="color:#0a2463;"></i>
+                    </div>
+                    <h3>Compra de Motos</h3>
+                    <p>Seleção exclusiva de motos premium, todas revisadas e garantidas.</p>
+                    <ul class="servico-list">
+                        <li><span class="check-icon"><i class="fas fa-check" style="font-size:0.6rem;"></i></span>Laudo cautelar incluso</li>
+                        <li><span class="check-icon"><i class="fas fa-check" style="font-size:0.6rem;"></i></span>Garantia de 90 dias</li>
+                        <li><span class="check-icon"><i class="fas fa-check" style="font-size:0.6rem;"></i></span>Documentação em dia</li>
+                    </ul>
+                    <a href="#ofertas" class="btn btn-outline">
+                        <i class="fas fa-search"></i> Ver Ofertas
+                    </a>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon-wrap vermelho">
+                        <i class="fas fa-hand-holding-dollar" style="color:#d50000;"></i>
+                    </div>
+                    <h3>Venda sua Moto</h3>
+                    <p>Avaliamos e compramos sua moto à vista pelo melhor preço do mercado.</p>
+                    <ul class="servico-list">
+                        <li><span class="check-icon"><i class="fas fa-check" style="font-size:0.6rem;"></i></span>Avaliação em até 1h</li>
+                        <li><span class="check-icon"><i class="fas fa-check" style="font-size:0.6rem;"></i></span>Pagamento imediato</li>
+                        <li><span class="check-icon"><i class="fas fa-check" style="font-size:0.6rem;"></i></span>Sem burocracia</li>
+                    </ul>
+                    <a href="https://wa.me/5562981770452" target="_blank" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Solicitar Avaliação
+                    </a>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon-wrap verde">
+                        <i class="fas fa-handshake" style="color:#16a34a;"></i>
+                    </div>
+                    <h3>Consignação</h3>
+                    <p>Vendemos sua moto pelo melhor preço, com total segurança e transparência.</p>
+                    <ul class="servico-list">
+                        <li><span class="check-icon"><i class="fas fa-check" style="font-size:0.6rem;"></i></span>Divulgação premium</li>
+                        <li><span class="check-icon"><i class="fas fa-check" style="font-size:0.6rem;"></i></span>Fotografia profissional</li>
+                        <li><span class="check-icon"><i class="fas fa-check" style="font-size:0.6rem;"></i></span>Negociação especializada</li>
+                    </ul>
+                    <a href="https://wa.me/5562981770452" target="_blank" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Saiba Mais
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+         OFERTAS — CARROSSEL COM PREÇO
+         ============================================= -->
+    <section id="ofertas" class="estoque-section">
+        <div class="container">
+            <p class="section-label">Disponível agora</p>
+            <h2 class="section-title">Nossas Ofertas</h2>
+            <p class="section-subtitle">As melhores oportunidades da região</p>
+
+            <div class="swiper meuCarrossel">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="moto-card">
+                            <img src="assets/img/motoscarrocel/xt660r2005.jpeg" alt="Yamaha XT 660R">
+                            <div class="moto-info">
+                                <span class="moto-badge" style="background:rgba(213,0,0,0.09);color:#d50000;">Destaque</span>
+                                <h3>Yamaha XT 660R</h3>
+                                <p class="ano-km"><i class="fas fa-calendar-alt"></i> 2005 &nbsp;•&nbsp; <i class="fas fa-road"></i> Consulte KM</p>
+                                <p class="preco">R$ 29.900,00</p>
+                                <p class="parcela-info"><i class="fas fa-credit-card"></i> Entrada + 15x de R$ 580,00*</p>
+                                <a href="https://wa.me/5562981770452?text=Tenho+interesse+na+XT+660R+2005" target="_blank" class="btn btn-primary btn-block">
+                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="info-card">
-                        <div class="info-icon green"><i class="fab fa-whatsapp"></i></div>
-                        <div class="info-text">
-                            <h4>WhatsApp Direto</h4>
-                            <p><a href="tel:+5562981770452">(62) 98177-0452</a></p>
+                    <!--<div class="swiper-slide">
+                        <div class="moto-card">
+                            <img src="assets/img/motoscarrocel/factor150ed2018.jpeg" alt="Yamaha Factor 150 ED">
+                            <div class="moto-info">
+                                <span class="moto-badge">Seminova</span>
+                                <h3>Yamaha Factor 150 ED</h3>
+                                <p class="ano-km"><i class="fas fa-calendar-alt"></i> 2018 &nbsp;•&nbsp; <i class="fas fa-road"></i> Consulte KM</p>
+                                <p class="preco">R$ 12.900,00</p>
+                                <p class="parcela-info"><i class="fas fa-credit-card"></i> Entrada + 12x de R$ 650,00*</p>
+                                <a href="https://wa.me/5562981770452?text=Tenho+interesse+na+Factor+150+2018" target="_blank" class="btn btn-primary btn-block">
+                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
+                                </a>
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="moto-card">
+                            <img src="assets/img/motoscarrocel/biz110l 2017.jpeg" alt="Honda Biz 110i">
+                            <div class="moto-info">
+                                <span class="moto-badge">Seminova</span>
+                                <h3>Honda Biz 110i</h3>
+                                <p class="ano-km"><i class="fas fa-calendar-alt"></i> 2017 &nbsp;•&nbsp; <i class="fas fa-road"></i> Consulte KM</p>
+                                <p class="preco">R$ 12.500,00</p>
+                                <p class="parcela-info"><i class="fas fa-credit-card"></i> Entrada + 12x de R$ 650,00*</p>
+                                <a href="https://wa.me/5562981770452?text=Tenho+interesse+na+Biz+110i+2017" target="_blank" class="btn btn-primary btn-block">
+                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="moto-card">
+                            <img src="assets/img/motoscarrocel/fan150ESI2012.jpeg" alt="Honda CG Fan 150 ESI">
+                            <div class="moto-info">
+                                <span class="moto-badge">Seminova</span>
+                                <h3>Honda CG Fan 150 ESI</h3>
+                                <p class="ano-km"><i class="fas fa-calendar-alt"></i> 2012 &nbsp;•&nbsp; <i class="fas fa-road"></i> Consulte KM</p>
+                                <p class="preco">R$ 12.500,00</p>
+                                <p class="parcela-info"><i class="fas fa-credit-card"></i> Entrada + 12x de R$ 650,00*</p>
+                                <a href="https://wa.me/5562981770452?text=Tenho+interesse+na+Fan+150+ESI+2012" target="_blank" class="btn btn-primary btn-block">
+                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                -->
+                    <div class="swiper-slide">
+                        <div class="moto-card">
+                            <img src="assets/img/motoscarrocel/biz1252023.jpeg" alt="Honda Biz 125">
+                            <div class="moto-info">
+                                <span class="moto-badge">Seminova</span>
+                                <h3>Honda Biz 125</h3>
+                                <p class="ano-km"><i class="fas fa-calendar-alt"></i> 2023 &nbsp;•&nbsp; <i class="fas fa-road"></i> Consulte KM</p>
+                                <p class="preco">R$ 17.500,00</p>
+                                <p class="parcela-info"><i class="fas fa-credit-card"></i> Entrada + 12x de R$ 930,00*</p>
+                                <a href="https://wa.me/5562981770452?text=Tenho+interesse+na+Biz+125+2023" target="_blank" class="btn btn-primary btn-block">
+                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--<div class="swiper-slide">
+                        <div class="moto-card">
+                            <img src="assets/img/motoscarrocel/bros160-2017.jpeg" alt="Honda NXR 160 Bros">
+                            <div class="moto-info">
+                                <span class="moto-badge">Seminova</span>
+                                <h3>Honda NXR 160 Bros</h3>
+                                <p class="ano-km"><i class="fas fa-calendar-alt"></i> 2017 &nbsp;•&nbsp; <i class="fas fa-road"></i> Consulte KM</p>
+                                <p class="preco">R$ 15.000,00</p>
+                                <p class="parcela-info"><i class="fas fa-credit-card"></i> Entrada + 12x de R$ 799,00*</p>
+                                <a href="https://wa.me/5562981770452?text=Tenho+interesse+na+Bros+160+2017" target="_blank" class="btn btn-primary btn-block">
+                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="moto-card">
+                            <img src="assets/img/motoscarrocel/biz125ex-2014.jpeg" alt="Honda Biz 125 EX">
+                            <div class="moto-info">
+                                <span class="moto-badge">Seminova</span>
+                                <h3>Honda Biz 125 EX</h3>
+                                <p class="ano-km"><i class="fas fa-calendar-alt"></i> 2014 &nbsp;•&nbsp; <i class="fas fa-road"></i> Consulte KM</p>
+                                <p class="preco">R$ 13.500,00</p>
+                                <p class="parcela-info"><i class="fas fa-credit-card"></i> Entrada + 12x de R$ 750,00*</p>
+                                <a href="https://wa.me/5562981770452?text=Tenho+interesse+na+Biz+125+EX+2014" target="_blank" class="btn btn-primary btn-block">
+                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="moto-card">
+                            <img src="assets/img/motoscarrocel/biz125ex-2012.jpeg" alt="Honda Biz 125 EX">
+                            <div class="moto-info">
+                                <span class="moto-badge">Seminova</span>
+                                <h3>Honda Biz 125 EX</h3>
+                                <p class="ano-km"><i class="fas fa-calendar-alt"></i> 2012/2013 &nbsp;•&nbsp; <i class="fas fa-road"></i> Consulte KM</p>
+                                <p class="preco">R$ 13.000,00</p>
+                                <p class="parcela-info"><i class="fas fa-credit-card"></i> Entrada + 12x de R$ 650,00*</p>
+                                <a href="https://wa.me/5562981770452?text=Tenho+interesse+na+Biz+125+EX+2012" target="_blank" class="btn btn-primary btn-block">
+                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
+                                </a>
+                            </div>
+                        </div>
+                        </div>
+                    -->
+                    <div class="swiper-slide">
+                        <div class="moto-card">
+                            <img src="assets/img/motoscarrocel/biz125ex2025.jpeg" alt="Honda Biz 125 EX 2025">
+                            <div class="moto-info">
+                                <span class="moto-badge" style="background:rgba(22,163,74,0.1);color:#16a34a;">Lançamento</span>
+                                <h3>Honda Biz 125 EX</h3>
+                                <p class="ano-km"><i class="fas fa-calendar-alt"></i> 2025 &nbsp;•&nbsp; <i class="fas fa-road"></i> 0 km</p>
+                                <p class="preco">R$ 19.999,00</p>
+                                <p class="parcela-info"><i class="fas fa-credit-card"></i> Entrada + 12x de R$ 1.050,00*</p>
+                                <a href="https://wa.me/5562981770452?text=Tenho+interesse+na+Biz+125+EX+2025+Azul" target="_blank" class="btn btn-primary btn-block">
+                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+<!----
+                    <div class="swiper-slide">
+                        <div class="moto-card">
+                            <img src="assets/img/motoscarrocel/biz125ex-2025-branca.jpeg" alt="Honda Biz 125 EX 2025 Branca">
+                            <div class="moto-info">
+                                <span class="moto-badge" style="background:rgba(22,163,74,0.1);color:#16a34a;">Lançamento</span>
+                                <h3>Honda Biz 125 EX (Branca)</h3>
+                                <p class="ano-km"><i class="fas fa-calendar-alt"></i> 2025 &nbsp;•&nbsp; <i class="fas fa-road"></i> 0 km</p>
+                                <p class="preco">R$ 19.999,00</p>
+                                <p class="parcela-info"><i class="fas fa-credit-card"></i> Entrada + 12x de R$ 1.050,00*</p>
+                                <a href="https://wa.me/5562981770452?text=Tenho+interesse+na+Biz+125+EX+2025+Branca" target="_blank" class="btn btn-primary btn-block">
+                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="moto-card">
+                            <img src="assets/img/motoscarrocel/fan150esdi-2013.jpeg" alt="Honda CG Fan 150 ESDI">
+                            <div class="moto-info">
+                                <span class="moto-badge">Seminova</span>
+                                <h3>Honda CG Fan 150 ESDI</h3>
+                                <p class="ano-km"><i class="fas fa-calendar-alt"></i> 2013/2014 &nbsp;•&nbsp; <i class="fas fa-road"></i> Consulte KM</p>
+                                <p class="preco">R$ 13.000,00</p>
+                                <p class="parcela-info"><i class="fas fa-credit-card"></i> Entrada + 12x de R$ 650,00*</p>
+                                <a href="https://wa.me/5562981770452?text=Tenho+interesse+na+Fan+150+ESDI+2013" target="_blank" class="btn btn-primary btn-block">
+                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                -->
+                    <div class="swiper-slide">
+                        <div class="moto-card">
+                            <img src="assets/img/motoscarrocel/cb250twister2022.jpeg" alt="Honda CB 250 Twister">
+                            <div class="moto-info">
+                                <span class="moto-badge">Seminova</span>
+                                <h3>Honda CB 250 Twister</h3>
+                                <p class="ano-km"><i class="fas fa-calendar-alt"></i> 2022 &nbsp;•&nbsp; <i class="fas fa-road"></i> Consulte KM</p>
+                                <p class="preco">R$ 21.999,00</p>
+                                <p class="parcela-info"><i class="fas fa-credit-card"></i> Entrada + 12x de R$ 1.200,00*</p>
+                                <a href="https://wa.me/5562981770452?text=Tenho+interesse+na+CB+250+Twister+2022" target="_blank" class="btn btn-primary btn-block">
+                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+<!----
+                    <div class="swiper-slide">
+                        <div class="moto-card">
+                            <img src="assets/img/motoscarrocel/fan160-2020.jpeg" alt="Honda CG 160 Fan">
+                            <div class="moto-info">
+                                <span class="moto-badge">Seminova</span>
+                                <h3>Honda CG 160 Fan</h3>
+                                <p class="ano-km"><i class="fas fa-calendar-alt"></i> 2020 &nbsp;•&nbsp; <i class="fas fa-road"></i> Consulte KM</p>
+                                <p class="preco">R$ 16.000,00</p>
+                                <p class="parcela-info"><i class="fas fa-credit-card"></i> Entrada + 12x de R$ 850,00*</p>
+                                <a href="https://wa.me/5562981770452?text=Tenho+interesse+na+Fan+160+2020" target="_blank" class="btn btn-primary btn-block">
+                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                -->
+                    <div class="swiper-slide">
+                        <div class="moto-card">
+                            <img src="assets/img/motoscarrocel/fan160-2022.jpeg" alt="Honda CG 160 Fan">
+                            <div class="moto-info">
+                                <span class="moto-badge">Seminova</span>
+                                <h3>Honda CG 160 Fan</h3>
+                                <p class="ano-km"><i class="fas fa-calendar-alt"></i> 2022 &nbsp;•&nbsp; <i class="fas fa-road"></i> Consulte KM</p>
+                                <p class="preco">R$ 18.000,00</p>
+                                <p class="parcela-info"><i class="fas fa-credit-card"></i> Entrada + 12x de R$ 950,00*</p>
+                                <a href="https://wa.me/5562981770452?text=Tenho+interesse+na+Fan+160+2022" target="_blank" class="btn btn-primary btn-block">
+                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+<!--
+                    <div class="swiper-slide">
+                        <div class="moto-card">
+                            <img src="assets/img/motoscarrocel/xtz125-2004.jpeg" alt="Yamaha XTZ 125 K">
+                            <div class="moto-info">
+                                <span class="moto-badge" style="background:rgba(10,36,99,0.08);color:#0a2463;">Oportunidade</span>
+                                <h3>Yamaha XTZ 125 K</h3>
+                                <p class="ano-km"><i class="fas fa-calendar-alt"></i> 2004/2005 &nbsp;•&nbsp; <i class="fas fa-road"></i> Consulte KM</p>
+                                <p class="preco">R$ 9.000,00</p>
+                                <p class="parcela-info"><i class="fas fa-credit-card"></i> Entrada + 12x de R$ 450,00*</p>
+                                <a href="https://wa.me/5562981770452?text=Tenho+interesse+na+XTZ+125+2004" target="_blank" class="btn btn-primary btn-block">
+                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="swiper-slide">
+                        <div class="moto-card">
+                            <img src="assets/img/motoscarrocel/biz125ks-2006.jpeg" alt="Honda Biz 125 KS">
+                            <div class="moto-info">
+                                <span class="moto-badge" style="background:rgba(10,36,99,0.08);color:#0a2463;">Econômica</span>
+                                <h3>Honda Biz 125 KS</h3>
+                                <p class="ano-km"><i class="fas fa-calendar-alt"></i> 2006/2007 &nbsp;•&nbsp; <i class="fas fa-road"></i> Consulte KM</p>
+                                <p class="preco">R$ 8.500,00</p>
+                                <p class="parcela-info"><i class="fas fa-credit-card"></i> Entrada + 12x de R$ 450,00*</p>
+                                <a href="https://wa.me/5562981770452?text=Tenho+interesse+na+Biz+125+KS+2006" target="_blank" class="btn btn-primary btn-block">
+                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="moto-card">
+                            <img src="assets/img/motoscarrocel/cbx250-twister-2022.jpeg" alt="Honda CBX 250 Twister">
+                            <div class="moto-info">
+                                <span class="moto-badge">Seminova</span>
+                                <h3>Honda CBX 250 Twister</h3>
+                                <p class="ano-km"><i class="fas fa-calendar-alt"></i> 2007/2008 &nbsp;•&nbsp; <i class="fas fa-road"></i> Consulte KM</p>
+                                <p class="preco">R$ 16.000,00</p>
+                                <p class="parcela-info"><i class="fas fa-credit-card"></i> Entrada + 10x de R$ 750,00*</p>
+                                <a href="https://wa.me/5562981770452?text=Tenho+interesse+na+CBX+250+Twister+2007" target="_blank" class="btn btn-primary btn-block">
+                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="moto-card">
+                            <img src="assets/img/motoscarrocel/biz125es-2011.jpeg" alt="Honda Biz 125 ES">
+                            <div class="moto-info">
+                                <span class="moto-badge">Seminova</span>
+                                <h3>Honda Biz 125 ES</h3>
+                                <p class="ano-km"><i class="fas fa-calendar-alt"></i> 2011 &nbsp;•&nbsp; <i class="fas fa-road"></i> Consulte KM</p>
+                                <p class="preco">R$ 10.900,00</p>
+                                <p class="parcela-info"><i class="fas fa-credit-card"></i> Entrada + 12x de R$ 750,00*</p>
+                                <a href="https://wa.me/5562981770452?text=Tenho+interesse+na+Biz+125+ES+2011" target="_blank" class="btn btn-primary btn-block">
+                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="moto-card">
+                            <img src="assets/img/motoscarrocel/bros160-esd-2018.jpeg" alt="Honda Bros 160 ESD">
+                            <div class="moto-info">
+                                <span class="moto-badge">Seminova</span>
+                                <h3>Honda Bros 160 ESD</h3>
+                                <p class="ano-km"><i class="fas fa-calendar-alt"></i> 2018 &nbsp;•&nbsp; <i class="fas fa-road"></i> Consulte KM</p>
+                                <p class="preco">R$ 17.900,00</p>
+                                <p class="parcela-info"><i class="fas fa-credit-card"></i> Entrada + 12x de R$ 930,00*</p>
+                                <a href="https://wa.me/5562981770452?text=Tenho+interesse+na+Bros+160+ESD+2018" target="_blank" class="btn btn-primary btn-block">
+                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                -->
+                    <div class="swiper-slide">
+                        <div class="moto-card">
+                            <img src="assets/img/motoscarrocel/bros160-2023.jpeg" alt="Honda Bros 160">
+                            <div class="moto-info">
+                                <span class="moto-badge">Seminova</span>
+                                <h3>Honda Bros 160</h3>
+                                <p class="ano-km"><i class="fas fa-calendar-alt"></i> 2022/2023 &nbsp;•&nbsp; <i class="fas fa-road"></i> Consulte KM</p>
+                                <p class="preco">R$ 21.900,00</p>
+                                <p class="parcela-info"><i class="fas fa-credit-card"></i> Entrada + 12x de R$ 1.199,00*</p>
+                                <a href="https://wa.me/5562981770452?text=Tenho+interesse+na+Bros+160+2022" target="_blank" class="btn btn-primary btn-block">
+                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="moto-card">
+                            <img src="assets/img/motoscarrocel/titan160-2023.jpeg" alt="Honda Titan 160">
+                            <div class="moto-info">
+                                <span class="moto-badge">Seminova</span>
+                                <h3>Honda Titan 160</h3>
+                                <p class="ano-km"><i class="fas fa-calendar-alt"></i> 2022/2023 &nbsp;•&nbsp; <i class="fas fa-road"></i> Consulte KM</p>
+                                <p class="preco">R$ 18.000,00</p>
+                                <p class="parcela-info"><i class="fas fa-credit-card"></i> Entrada + 12x de R$ 850,00*</p>
+                                <a href="https://wa.me/5562981770452?text=Tenho+interesse+na+Titan+160+2022" target="_blank" class="btn btn-primary btn-block">
+                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+<!--
+                    <div class="swiper-slide">
+                        <div class="moto-card">
+                            <img src="assets/img/motoscarrocel/twister250-2021.jpeg" alt="Honda CBX Twister 250">
+                            <div class="moto-info">
+                                <span class="moto-badge">Seminova</span>
+                                <h3>Honda CBX Twister 250</h3>
+                                <p class="ano-km"><i class="fas fa-calendar-alt"></i> 2021 &nbsp;•&nbsp; <i class="fas fa-road"></i> Consulte KM</p>
+                                <p class="preco">R$ 20.000,00</p>
+                                <p class="parcela-info"><i class="fas fa-credit-card"></i> Entrada + 12x de R$ 1.050,00*</p>
+                                <a href="https://wa.me/5562981770452?text=Tenho+interesse+na+Twister+250+2021" target="_blank" class="btn btn-primary btn-block">
+                                    <i class="fab fa-whatsapp"></i> Tenho Interesse
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                -->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- AVISO JURÍDICO -->
+            <p class="aviso-condicoes">
+                <i class="fas fa-circle-info"></i>
+                *Valores de parcelas sujeitas à análise de crédito. Consulte condições completas de financiamento diretamente com nossa equipe.
+            </p>
+        </div>
+    </section>
+
+    <!-- =============================================
+         ESTOQUE COMPLETO — GALERIA COM LIGHTBOX
+         ============================================= 
+    <section id="estoque" class="galeria-section">
+        <div class="container">
+            <p class="section-label">Confira tudo</p>
+            <h2 class="section-title">Estoque Completo</h2>
+            <p class="section-subtitle">Toque na foto para ampliar — fale conosco pelo WhatsApp para saber mais</p>
+
+            <div class="galeria-grid">
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/xt660r2005.jpeg" alt="Yamaha XT 660R 2005" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Yamaha XT 660R</span>
+                        <span class="galeria-ano">2005</span>
                     </div>
                 </div>
-                
-                <div class="contato-mapa">
-                    <iframe src="https://www.google.com/maps/search/?api=1&query=Avenida+W5+Quadra+137+Lote+01+Sitio+Santa+Luzia+Aparecida+de+Goiania+GO+74922-685" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/factor150ed2018.jpeg" alt="Yamaha Factor 150 ED 2018" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Yamaha Factor 150 ED</span>
+                        <span class="galeria-ano">2018</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/biz110l 2017.jpeg" alt="Honda Biz 110i 2017" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda Biz 110i</span>
+                        <span class="galeria-ano">2017</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/fan150ESI2012.jpeg" alt="Honda CG Fan 150 ESI 2012" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda CG Fan 150 ESI</span>
+                        <span class="galeria-ano">2012</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/biz125-2023.jpeg" alt="Honda Biz 125 2023" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda Biz 125</span>
+                        <span class="galeria-ano">2023</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/bros160-2017.jpeg" alt="Honda NXR 160 Bros 2017" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda NXR 160 Bros</span>
+                        <span class="galeria-ano">2017</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/biz125ex-2014.jpeg" alt="Honda Biz 125 EX 2014" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda Biz 125 EX</span>
+                        <span class="galeria-ano">2014</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/biz125ex-2012.jpeg" alt="Honda Biz 125 EX 2012" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda Biz 125 EX</span>
+                        <span class="galeria-ano">2012/2013</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/biz125ex-2025-azul.jpeg" alt="Honda Biz 125 EX 2025 Azul" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda Biz 125 EX (Azul)</span>
+                        <span class="galeria-ano" style="color:#16a34a;">2025 • 0 km</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/biz125ex-2025-branca.jpeg" alt="Honda Biz 125 EX 2025 Branca" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda Biz 125 EX (Branca)</span>
+                        <span class="galeria-ano" style="color:#16a34a;">2025 • 0 km</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/fan150esdi-2013.jpeg" alt="Honda CG Fan 150 ESDI 2013" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda CG Fan 150 ESDI</span>
+                        <span class="galeria-ano">2013/2014</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/cb250-twister-2022.jpeg" alt="Honda CB 250 Twister 2022" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda CB 250 Twister</span>
+                        <span class="galeria-ano">2022</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/fan160-2020.jpeg" alt="Honda CG 160 Fan 2020" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda CG 160 Fan</span>
+                        <span class="galeria-ano">2020</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/fan160-2022.jpeg" alt="Honda CG 160 Fan 2022" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda CG 160 Fan</span>
+                        <span class="galeria-ano">2022</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/xtz125-2004.jpeg" alt="Yamaha XTZ 125 K 2004" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Yamaha XTZ 125 K</span>
+                        <span class="galeria-ano">2004/2005</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/biz125ks-2006.jpeg" alt="Honda Biz 125 KS 2006" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda Biz 125 KS</span>
+                        <span class="galeria-ano">2006/2007</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/cbx250-twister-2022.jpeg" alt="Honda CBX 250 Twister" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda CBX 250 Twister</span>
+                        <span class="galeria-ano">2007/2008</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/biz125es-2011.jpeg" alt="Honda Biz 125 ES 2011" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda Biz 125 ES</span>
+                        <span class="galeria-ano">2011</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/bros160-esd-2018.jpeg" alt="Honda Bros 160 ESD 2018" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda Bros 160 ESD</span>
+                        <span class="galeria-ano">2018</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/bros160-2022.jpeg" alt="Honda Bros 160 2022" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda Bros 160</span>
+                        <span class="galeria-ano">2022/2023</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/titan160-2022.jpeg" alt="Honda Titan 160 2022" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda Titan 160</span>
+                        <span class="galeria-ano">2022/2023</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/twister250-2021.jpeg" alt="Honda CBX Twister 250 2021" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda CBX Twister 250</span>
+                        <span class="galeria-ano">2021</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="galeria-cta">
+                <p>Gostou de alguma? Fale agora com a gente!</p>
+                <a href="https://wa.me/5562981770452?text=Quero+ver+o+estoque+completo+da+DM+Motos" target="_blank" class="btn btn-whatsapp btn-lg">
+                    <i class="fab fa-whatsapp"></i> Ver Estoque pelo WhatsApp
+                </a>
+            </div>
+        </div>
+    </section> --> 
+
+     <!-- =============================================
+         ESTOQUE COMPLETO — GALERIA COM LIGHTBOX
+         ============================================= -->
+    <section id="estoque" class="galeria-section">
+        <div class="container">
+            <p class="section-label">Confira tudo</p>
+            <h2 class="section-title">Estoque Principal</h2>
+            <p class="section-subtitle">Toque na foto para ampliar — fale conosco pelo WhatsApp para saber mais</p>
+
+            <div class="galeria-grid">
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/xt660r2005.jpeg" alt="Yamaha XT 660R 2005" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Yamaha XT 660R</span>
+                        <span class="galeria-ano">2005</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/factor150ed2018.jpeg" alt="Yamaha Factor 150 ED 2018" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Yamaha Factor 150 ED</span>
+                        <span class="galeria-ano">2018</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/biz110l 2017.jpeg" alt="Honda Biz 110i 2017" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda Biz 110i</span>
+                        <span class="galeria-ano">2017</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/fan150ESI2012.jpeg" alt="Honda CG Fan 150 ESI 2012" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda CG Fan 150 ESI</span>
+                        <span class="galeria-ano">2012</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/biz1252023.jpeg" alt="Honda Biz 125 2023" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda Biz 125</span>
+                        <span class="galeria-ano">2023</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/bros1602017.jpeg" alt="Honda NXR 160 Bros 2017" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda NXR 160 Bros</span>
+                        <span class="galeria-ano">2017</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/biz125ex2014.jpeg" alt="Honda Biz 125 EX 2014" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda Biz 125 EX</span>
+                        <span class="galeria-ano">2014</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/biz125ex2013.jpeg" alt="Honda Biz 125 EX 2012" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda Biz 125 EX</span>
+                        <span class="galeria-ano">2012/2013</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/biz125ex2025.jpeg" alt="Honda Biz 125 EX 2025 Azul" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda Biz 125 EX</span>
+                        <span class="galeria-ano" style="color:#16a34a;">2025 • 0 km</span>
+                    </div>
+                </div>
+
+               <!---- <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/biz125ex-2025-branca.jpeg" alt="Honda Biz 125 EX 2025 Branca" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda Biz 125 EX</span>
+                        <span class="galeria-ano" style="color:#16a34a;">2025 • 0 km</span>
+                    </div>
+                </div>-->
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/fan150esdi2014.jpeg" alt="Honda CG Fan 150 ESDI 2013" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda CG Fan 150 ESDI</span>
+                        <span class="galeria-ano">2013/2014</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/cb250twister2022.jpeg" alt="Honda CB 250 Twister 2022" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda CB 250 Twister</span>
+                        <span class="galeria-ano">2022</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/cg160fan2020.jpeg" alt="Honda CG 160 Fan 2020" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda CG 160 Fan</span>
+                        <span class="galeria-ano">2020</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/fan160-2022.jpeg" alt="Honda CG 160 Fan 2022" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda CG 160 Fan</span>
+                        <span class="galeria-ano">2022</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/xtz2005.jpeg" alt="Yamaha XTZ 125 K 2004" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Yamaha XTZ 125 K</span>
+                        <span class="galeria-ano">2004/2005</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/biz125ks2007.jpeg" alt="Honda Biz 125 KS 2006" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda Biz 125 KS</span>
+                        <span class="galeria-ano">2006/2007</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/cbx-250-2008.jpeg" alt="Honda CBX 250 Twister" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda CBX 250 Twister</span>
+                        <span class="galeria-ano">2007/2008</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/biz125es-2011.jpeg" alt="Honda Biz 125 ES 2011" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda Biz 125 ES</span>
+                        <span class="galeria-ano">2011</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/bros160esd2018.jpeg" alt="Honda Bros 160 ESD 2018" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda Bros 160 ESD</span>
+                        <span class="galeria-ano">2018</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/bros160-2023.jpeg" alt="Honda Bros 160 2022" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda Bros 160</span>
+                        <span class="galeria-ano">2022/2023</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/titan160-2023.jpeg" alt="Honda Titan 160 2022" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda Titan 160</span>
+                        <span class="galeria-ano">2022/2023</span>
+                    </div>
+                </div>
+
+                <div class="galeria-item" onclick="abrirLightbox(this)">
+                    <img src="assets/img/motoscarrocel/cbxtwister2502021.jpeg" alt="Honda CBX Twister 250 2021" loading="lazy">
+                    <div class="galeria-info">
+                        <span class="galeria-nome">Honda CBX Twister 250</span>
+                        <span class="galeria-ano">2021</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="galeria-cta">
+                <p>Gostou de alguma? Fale agora com a gente!</p>
+                <a href="https://wa.me/5562981770452?text=Quero+ver+o+estoque+completo+da+DM+Motos" target="_blank" class="btn btn-whatsapp btn-lg">
+                    <i class="fab fa-whatsapp"></i> Ver Estoque pelo WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox" onclick="fecharLightbox()">
+        <button class="lightbox-close" aria-label="Fechar">
+            <i class="fas fa-times"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
+    <!-- =============================================
+         FINANCIAMENTO
+         ============================================= -->
+    <section id="financiamento" class="financiamento-section">
+        <div class="container">
+            <p class="section-label">Crédito facilitado</p>
+            <h2 class="section-title">Financiamento</h2>
+            <p class="section-subtitle">Realize seu sonho com as melhores taxas do mercado</p>
+
+            <div class="financiamento-intro">
+                <h3>Parceria com os Melhores Bancos</h3>
+                <p>Trabalhamos com 4 instituições financeiras para garantir a melhor condição para você.</p>
+            </div>
+
+            <div class="bancos-grid">
+                <div class="banco-item">
+                    <img src="assets/img/logo-santander.png" alt="Santander" class="banco-img">
+                </div>
+                <div class="banco-item">
+                    <img src="assets/img/logo-c6.jpg" alt="C6 Bank" class="banco-img">
+                </div>
+                <div class="banco-item">
+                    <img src="assets/img/logo-pan.webp" alt="Banco Pan" class="banco-img">
+                </div>
+                <div class="banco-item">
+                    <img src="assets/img/logo-bv-financeira.png" alt="BV Financeira" class="banco-img">
+                </div>
+            </div>
+
+            <div class="financiamento-tipos">
+
+                <div class="tipo-card">
+                    <div class="tipo-icon-wrap">
+                        <i class="fas fa-file-invoice-dollar" style="color:#d50000;"></i>
+                    </div>
+                    <h3>Financiamento Tradicional</h3>
+                    <p>Entrada a partir de 20% e parcelas fixas em até 60 meses.</p>
+                    <a href="https://wa.me/5562981770452" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-whatsapp"></i> Simular Agora
+                    </a>
+                </div>
+
+                <div class="tipo-card">
+                    <div class="tipo-icon-wrap">
+                        <i class="fas fa-arrows-rotate" style="color:#d50000;"></i>
+                    </div>
+                    <h3>Troca com Financiamento</h3>
+                    <p>Use sua moto atual como entrada e financie o restante.</p>
+                    <a href="https://wa.me/5562981770452" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-whatsapp"></i> Avaliar Troca
+                    </a>
+                </div>
+
+                <div class="tipo-card">
+                    <div class="tipo-icon-wrap">
+                        <i class="fas fa-star" style="color:#d50000;"></i>
+                    </div>
+                    <h3>Crédito DM Motos</h3>
+                    <p>Aprovação rápida e menos burocracia. Direto com a gente!</p>
+                    <a href="https://wa.me/5562981770452" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-whatsapp"></i> Saber Mais
+                    </a>
+                </div>
+
+                <div class="tipo-card">
+                    <div class="tipo-icon-wrap">
+                        <i class="fas fa-receipt" style="color:#d50000;"></i>
+                    </div>
+                    <h3>Crediário Próprio</h3>
+                    <p>Entrada + parcelas mensais via carnê. Aprovação facilitada!</p>
+                    <a href="https://wa.me/5562981770452" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-whatsapp"></i> Saber Mais
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+         COMPRA PROGRAMADA
+         ============================================= -->
+    <section id="compraprogramada" class="compra-section">
+        <div class="container">
+            <p class="section-label">Sem juros abusivos</p>
+            <h2 class="section-title">Compra Programada</h2>
+            <p class="section-subtitle">Não tem entrada? A gente tem a solução!</p>
+
+            <div class="compra-content">
+                <div class="compra-texto">
+                    <h3>Como funciona?</h3>
+                    <p>Não tem entrada? Sem problema! Na Compra Programada você entra com uma taxa de adesão e vai formando a entrada aos poucos, <strong>sem juros</strong>. Quando atingir 60% já sai de moto!</p>
+
+                    <!-- Card de destaque do plano -->
+                    <div class="plano-destaque">
+                        <div class="plano-header">
+                            <i class="fas fa-motorcycle"></i>
+                            <span>Plano Compra Programada</span>
+                        </div>
+                        <div class="plano-etapas">
+                            <div class="plano-etapa">
+                                <div class="etapa-num">1</div>
+                                <div class="etapa-texto">
+                                    <strong>Taxa de Adesão</strong>
+                                    <p>Pague <span class="valor-destaque">R$ 450,00</span> para entrar no plano</p>
+                                </div>
+                            </div>
+                            <div class="plano-seta"><i class="fas fa-chevron-down"></i></div>
+                            <div class="plano-etapa">
+                                <div class="etapa-num">2</div>
+                                <div class="etapa-texto">
+                                    <strong>Forme a Entrada <span class="tag-semjuros">Sem Juros</span></strong>
+                                    <p>Pague a entrada parcelada até atingir <span class="valor-destaque">60%</span> do valor do veículo</p>
+                                </div>
+                            </div>
+                            <div class="plano-seta"><i class="fas fa-chevron-down"></i></div>
+                            <div class="plano-etapa etapa-destaque">
+                                <div class="etapa-num">3</div>
+                                <div class="etapa-texto">
+                                    <strong>Retire sua Moto! 🏍️</strong>
+                                    <p>Com 60% formado, já <span class="valor-destaque">sai de moto na loja</span></p>
+                                </div>
+                            </div>
+                            <div class="plano-seta"><i class="fas fa-chevron-down"></i></div>
+                            <div class="plano-etapa">
+                                <div class="etapa-num">4</div>
+                                <div class="etapa-texto">
+                                    <strong>Pague o Restante</strong>
+                                    <p>Os 40% restantes com <span class="valor-destaque">5% de juros</span> em até <span class="valor-destaque">15 meses</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vantagens-grid">
+                        <div class="vantagem-item">
+                            <div class="vantagem-icon">
+                                <i class="fas fa-door-open"></i>
+                            </div>
+                            <div>
+                                <h4>Entrada Facilitada</h4>
+                                <p>Só R$ 450 de adesão para começar</p>
+                            </div>
+                        </div>
+                        <div class="vantagem-item">
+                            <div class="vantagem-icon">
+                                <i class="fas fa-percent"></i>
+                            </div>
+                            <div>
+                                <h4>60% Sem Juros</h4>
+                                <p>Forme a entrada sem pagar nada a mais</p>
+                            </div>
+                        </div>
+                        <div class="vantagem-item">
+                            <div class="vantagem-icon">
+                                <i class="fas fa-motorcycle"></i>
+                            </div>
+                            <div>
+                                <h4>Retire com 60%</h4>
+                                <p>Não precisa esperar pagar tudo para sair de moto</p>
+                            </div>
+                        </div>
+                        <div class="vantagem-item">
+                            <div class="vantagem-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div>
+                                <h4>Até 15 meses</h4>
+                                <p>Prazo confortável para pagar os 40% restantes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="compra-cta">
+                        <a href="https://wa.me/5562981770452?text=Quero+saber+mais+sobre+a+Compra+Programada" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-whatsapp"></i> Quero Entrar no Plano
+                        </a>
+                        <!--<a href="https://wa.me/5562981770452?text=Quero+simular+a+Compra+Programada" target="_blank" class="btn btn-outline">
+                            <i class="fas fa-calculator"></i> Simular Agora
+                        </a>--->
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- =============================================
+         CONTATO
+         ============================================= -->
+    <section id="contato" class="contato-section">
+        <div class="container">
+            <p class="section-label">Fale conosco</p>
+            <h2 class="section-title">Entre em Contato</h2>
+            <p class="section-subtitle">Estamos prontos para atender você</p>
+
+            <div class="contato-container">
+                <div class="contato-info">
+
+                    <div class="info-card">
+                        <div class="info-icon red">
+                            <i class="fas fa-location-dot"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Endereço</h4>
+                            <p>
+                                Av. W5 Qd 137 Lt 01<br>
+                                Sítio Santa Luzia<br>
+                                Aparecida de Goiânia – GO
+                            </p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Avenida+W5+Quadra+137+Lote+01+Sitio+Santa+Luzia+Aparecida+de+Goiania+GO+74922-685"
+                                target="_blank" class="btn-maps">
+                                <i class="fas fa-map"></i> Abrir no Google Maps
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon green">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>WhatsApp</h4>
+                            <p><a href="tel:+5562981770452">(62) 98177-0452</a></p>
+                            <a href="https://wa.me/5562981770452" target="_blank" class="whatsapp-link">
+                                <i class="fab fa-whatsapp"></i> Chamar agora
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon blue">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Horário</h4>
+                            <p>
+                                Seg a Sex: <strong>8h às 18h</strong><br>
+                                Sábado: <strong>8h às 12h</strong><br>
+                                Domingo: Fechado
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="contato-mapa">
+                    <div class="mapa-placeholder">
+                        <i class="fas fa-map-location-dot"></i>
+                        <h4>Av. W5, Qd 137 Lt 01</h4>
+                        <p>Sítio Santa Luzia — Aparecida de Goiânia, GO</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Avenida+W5+Quadra+137+Lote+01+Sitio+Santa+Luzia+Aparecida+de+Goiania+GO+74922-685"
+                            target="_blank" class="btn btn-primary" style="margin-top:16px;">
+                            <i class="fas fa-map"></i> Abrir no Google Maps
+                        </a>
+                        <p class="mapa-obs">
+                            <i class="fas fa-info-circle"></i>
+                            Toque no botão para ver a rota no seu celular
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+         FOOTER
+         ============================================= -->
     <footer>
         <div class="container">
+            <div class="footer-content">
+
+                <div class="footer-col">
+                    <h3>DM Motos</h3>
+                    <p>Especialistas em compras, vendas, trocas e financiamentos de motocicletas em Aparecida de Goiânia.</p>
+                    
+                </div>
+
+                <div class="footer-col">
+                    <h3>Navegação</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#ofertas">Ofertas</a></li>
+                        <li><a href="#estoque">Estoque</a></li>
+                        <li><a href="#financiamento">Financiamento</a></li>
+                        <li><a href="#compraprogramada">Compra Programada</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Serviços</h3>
+                    <ul class="footer-links">
+                        <li><a href="#financiamento">Financiamento de Motos</a></li>
+                        <li><a href="#servicos">Venda por Consignação</a></li>
+                        <li><a href="#estoque">Compra de Motos</a></li>
+                        <li><a href="#servicos">Troca de Motos</a></li>
+                        <li><a href="#compraprogramada">Compra Programada</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <i class="fas fa-location-dot"></i>
+                            <span>Av. W5 Qd 137 Lt 01, Sítio Santa Luzia, Aparecida de Goiânia – GO</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+5562981770452">(62) 98177-0452</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/5562981770452" target="_blank">(62) 98177-0452</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:dmmotos3@gmail.com">dmmotos3@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Seg–Sex: 8h–18h | Sáb: 8h–13h</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
             <div class="footer-bottom">
-                <p>© <span id="currentYear"></span> DM Motos. Site em fase final de homologação.</p>
-                <p class="disclaimer-small">Aparecida de Goiânia – GO | Atendimento: (62) 98177-0452</p>
+                <p>&copy; <span id="currentYear"></span> DM Motos. Todos os direitos reservados.</p>
+                <p style="margin-top: 5px;">
+        Infraestrutura e Desenvolvimento por <a href="https://www.linkedin.com/in/thiago-s-vilas-boas-696107b5/" target="_blank" style="color: #3780c5; text-decoration: none; font-weight: bold;">Thiago Vilas Boas</a>
+
+                <p class="disclaimer-small">
+                    Av. W5 Qd 137 Lt 01 – Sítio Santa Luzia, Aparecida de Goiânia – GO | CEP: 74922-685
+                </p>
+                <p class="disclaimer-small">
+                    *Consulte condições de financiamento.
+                </p>
             </div>
         </div>
     </footer>
 
+    <!-- BOTÕES FLUTUANTES -->
     <div class="social-float">
-        <a href="https://wa.me/5562981770452" target="_blank" class="social-icon whatsapp">
+        <a href="https://wa.me/5562981770452" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp">
             <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/dmmotos18/" target="_blank" class="social-icon instagram" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
         </a>
     </div>
 
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
     <script>
+        // === ANO ATUAL ===
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // === MENU HAMBURGER ===
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = mainNav.classList.toggle('nav-open');
+            menuToggle.classList.toggle('open', isOpen);
+            menuToggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('nav-open');
+                menuToggle.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !mainNav.contains(e.target)) {
+                mainNav.classList.remove('nav-open');
+                menuToggle.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // === BADGE HORÁRIO DE ATENDIMENTO ===
+        (function() {
+            // Horário de Brasília (UTC-3)
+            const agora = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }));
+            const dia = agora.getDay(); // 0=Dom, 1=Seg ... 6=Sáb
+            const hora = agora.getHours();
+            const min = agora.getMinutes();
+            const hTotal = hora + min / 60;
+
+            const badge  = document.getElementById('heroBadge');
+            const dot    = document.getElementById('heroDot');
+            const status = document.getElementById('heroStatus');
+
+            // Seg–Sex: 8h–18h | Sáb: 8h–13h | Dom: fechado
+            const aberto =
+                (dia >= 1 && dia <= 5 && hTotal >= 8 && hTotal < 18) ||
+                (dia === 6 && hTotal >= 8 && hTotal < 12);
+
+            if (aberto) {
+                status.textContent = 'Atendimento disponível agora';
+                badge.style.background = '#16a34a';   // verde
+                dot.style.background   = '#bbf7d0';
+            } else {
+                dot.style.animation = 'none';
+                dot.style.background = 'rgba(255,255,255,0.5)';
+                badge.style.background = 'rgba(255,255,255,0.15)';
+                badge.style.border = '1px solid rgba(255,255,255,0.2)';
+
+                // Calcula próxima abertura
+                const proximoTexto = (dia === 0 || dia === 6 && hTotal >= 13)
+                    ? 'Abre seg às 8h'
+                    : dia === 6 ? 'Abre hoje às 8h'
+                    : hTotal < 8 ? 'Abre hoje às 8h'
+                    : 'Abre amanhã às 8h';
+
+                status.textContent = 'Fechado · ' + proximoTexto;
+            }
+        })();
+
+        // === LIGHTBOX ===
+        function abrirLightbox(el) {
+            const img  = el.querySelector('img');
+            const nome = (el.querySelector('.galeria-nome') || el.querySelector('h3') || {textContent:''}).textContent;
+            const ano  = (el.querySelector('.galeria-ano')  || el.querySelector('.ano-km') || {textContent:''}).textContent;
+            const waText = encodeURIComponent('Tenho interesse na ' + nome + ' ' + ano);
+
+            document.getElementById('lightbox-img').src = img.src;
+            document.getElementById('lightbox-img').alt = img.alt || nome;
+
+            document.getElementById('lightbox-caption').innerHTML =
+                '<strong>' + (nome || img.alt) + '</strong>' +
+                (ano ? '<span>' + ano + '</span>' : '') +
+                '<br>' +
+                '<a href="https://wa.me/5562981770452?text=' + waText + '" target="_blank" onclick="event.stopPropagation()">' +
+                '<i class="fab fa-whatsapp"></i> Tenho Interesse' +
+                '</a>';
+
+            document.getElementById('lightbox').classList.add('ativo');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function fecharLightbox() {
+            document.getElementById('lightbox').classList.remove('ativo');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') fecharLightbox(); });
+
+        // Impede que clicar NA imagem feche o lightbox
+        document.getElementById('lightbox').querySelector('img').addEventListener('click', e => e.stopPropagation());
+        document.getElementById('lightbox').querySelector('.lightbox-caption').addEventListener('click', e => e.stopPropagation());
+
+        // === LIGHTBOX NAS FOTOS DO CARROSSEL ===
+        document.querySelector('.meuCarrossel').addEventListener('click', function(e) {
+            const img = e.target.closest('.moto-card img');
+            if (!img) return;
+            const card = img.closest('.moto-card');
+            abrirLightbox(card);
+        });
     </script>
 
 </body>

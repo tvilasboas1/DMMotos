@@ -15,14 +15,8 @@ const swiper = new Swiper('.meuCarrossel', {
         prevEl: '.swiper-button-prev',
     },
     breakpoints: {
-        640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        968: {
-            slidesPerView: 3,
-            spaceBetween: 28,
-        }
+        640: { slidesPerView: 2, spaceBetween: 20 },
+        968: { slidesPerView: 3, spaceBetween: 28 }
     }
 });
 
@@ -34,12 +28,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const targetId = this.getAttribute('href');
         if (targetId === '#') return;
-
         const target = document.querySelector(targetId);
         if (target) {
             e.preventDefault();
-            const offset = 75;
-            const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            const top = target.getBoundingClientRect().top + window.pageYOffset - 75;
             window.scrollTo({ top, behavior: 'smooth' });
         }
     });
@@ -65,4 +57,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { rootMargin: '-50% 0px -50% 0px' });
 
-sections.forEach(section => observer.observe(section));
+sections.forEach(s => observer.observe(s));
+
+// Nota: abrirLightbox() e fecharLightbox() estão definidos
+// no <script> inline do index.html (após o carregamento do DOM)
