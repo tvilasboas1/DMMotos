@@ -126,11 +126,11 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-image:
-        linear-gradient(to bottom, rgba(7,26,71,0.72) 0%, rgba(7,26,71,0.55) 60%, rgba(7,26,71,0.80) 100%),
-        url('../img/planoDeFundo2.webp');
-    background-size: cover;
-    background-position: center 55%;
+    background-color: #fff;
+    background-image: url('../img/planoDeFundo2.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
     color: white;
     padding: 100px 18px 70px;
     position: relative;
@@ -149,6 +149,7 @@ nav a:hover {
     max-width: 700px;
     position: relative;
     z-index: 1;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6), 0 1px 3px rgba(0,0,0,0.5);
 }
 
 .hero-badge {
@@ -1166,7 +1167,7 @@ footer {
 }
 
 .plano-etapa.etapa-destaque {
-    background: rgba(255,204,0,0.12);
+    background: rgba(255,255,255,0.15);
     border-left-color: var(--accent);
 }
 
@@ -1201,7 +1202,7 @@ footer {
 }
 
 .plano-etapa.etapa-destaque {
-    background: rgba(255,204,0,0.12);
+    background: rgba(255,255,255,0.15);
     border-left-color: var(--accent);
 }
 
@@ -1312,4 +1313,12 @@ footer {
 /* Badge fechado no hero */
 #heroBadge {
     transition: background 0.3s;
+}
+
+/* Mobile: imagem preenche a tela, focada na fachada (topo) */
+@media (max-width: 768px) {
+    .hero {
+        background-size: cover;
+        background-position: center 20%;
+    }
 }
