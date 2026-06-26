@@ -59,7 +59,7 @@ header {
     align-items: center;
     height: 68px;
     padding: 0 18px;
-    max-width: 1200px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
@@ -143,6 +143,7 @@ nav a:hover {
     bottom: 0; left: 0; right: 0;
     height: 50px;
     background: linear-gradient(to bottom, transparent, #fff);
+    z-index: 2;
 }
 
 .hero-content {
@@ -1315,10 +1316,32 @@ footer {
     transition: background 0.3s;
 }
 
-/* Mobile: imagem preenche a tela, focada na fachada (topo) */
+/* Mobile: imagem 4:3 ajustada sem cortar */
 @media (max-width: 768px) {
     .hero {
-        background-size: cover;
-        background-position: center 20%;
+        background-size: 100% auto;
+        background-position: center top;
+        background-color: #0a0e1a;
+        min-height: auto;
+        padding: 90px 18px 50px;
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            to bottom,
+            rgba(10, 14, 26, 0.45) 0%,
+            rgba(10, 14, 26, 0.15) 30%,
+            rgba(10, 14, 26, 0.30) 60%,
+            rgba(10, 14, 26, 0.75) 100%
+        );
+        z-index: 0;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
     }
 }
