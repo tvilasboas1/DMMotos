@@ -1,1 +1,10 @@
 /images
+# Arquivos temporários
+*.json
+*.xlsx
+*.pdf
+*.png
+*.md
+!README.md
+!sitemap.xml
+!robots.txt

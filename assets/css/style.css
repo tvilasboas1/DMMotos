@@ -498,19 +498,19 @@ section { padding: 72px 0; }
 }
 
 .banco-item {
-    background: white;
+    background: transparent;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 12px;
     border-radius: var(--radius-sm);
-    box-shadow: var(--shadow);
-    transition: transform 0.2s, box-shadow 0.2s;
-    border: 1px solid #e5e7eb;
+    box-shadow: none;
+    transition: transform 0.2s;
+    border: none;
 }
 
-.banco-item:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.banco-item:hover { transform: translateY(-3px); box-shadow: none; }
 
 .banco-img { max-width: 100%; max-height: 52px; object-fit: contain; }
 
@@ -1064,19 +1064,26 @@ footer {
 .lightbox-caption a {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    margin-top: 10px;
+    gap: 8px;
+    margin-top: 14px;
     background: var(--whatsapp);
     color: white;
     text-decoration: none;
-    padding: 9px 20px;
+    padding: 14px 28px;
     border-radius: 100px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 700;
-    transition: background 0.2s;
+    box-shadow: 0 4px 14px rgba(37,211,102,0.4);
+    transition: all 0.22s;
 }
 
-.lightbox-caption a:hover { background: #1fba5a; }
+.lightbox-caption a:hover {
+    background: #1fba5a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37,211,102,0.5);
+}
+
+.lightbox-caption a i { font-size: 1.15rem; }
 
 /* =============================================
    AVISO CONDIÇÕES / PARCELA INFO

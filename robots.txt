@@ -1,0 +1,8 @@
+# robots.txt — DM Motos
+# Permite indexação completa do site
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.dmmotos.com.br/sitemap.xml
