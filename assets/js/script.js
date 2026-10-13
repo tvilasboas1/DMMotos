@@ -2,10 +2,21 @@
 // SWIPER — Carrossel de Estoque
 // =============================================
 
-const swiper = new Swiper('.meuCarrossel', {
+let swiperOfertas = null;
+
+function criarCarrossel() {
+    if (swiperOfertas) swiperOfertas.destroy(true, true);
+    swiperOfertas = new Swiper('.meuCarrossel', {
     slidesPerView: 1,
     spaceBetween: 20,
     loop: true,
+    speed: 700,
+    // Gira sozinho a cada 3,5s; pausa quando o mouse está em cima
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -18,7 +29,11 @@ const swiper = new Swiper('.meuCarrossel', {
         640: { slidesPerView: 2, spaceBetween: 20 },
         968: { slidesPerView: 3, spaceBetween: 28 }
     }
-});
+    });
+}
+
+criarCarrossel();
+window.criarCarrossel = criarCarrossel;
 
 // =============================================
 // SCROLL SUAVE com offset do header

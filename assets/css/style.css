@@ -933,18 +933,32 @@ footer {
     letter-spacing: 0.03em;
 }
 
-/* Ícone de lupa ao hover */
+/* Brilho discreto passando pela foto (v1.10), escalonado entre os cards */
 .galeria-item::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(10,36,99,0);
-    transition: background 0.25s;
+    background: linear-gradient(105deg, transparent 42%, rgba(255,255,255,0.22) 50%, transparent 58%);
+    background-size: 260% 100%;
+    background-position: 200% 0;
+    animation: galeria-brilho 11s ease-in-out infinite;
     z-index: 1;
+    pointer-events: none;
 }
 
-.galeria-item:hover::before {
-    background: rgba(10,36,99,0.18);
+.galeria-item:nth-child(4n+2)::before { animation-delay: 2.7s; }
+.galeria-item:nth-child(4n+3)::before { animation-delay: 5.4s; }
+.galeria-item:nth-child(4n)::before   { animation-delay: 8.1s; }
+
+@keyframes galeria-brilho {
+    0%        { background-position: 200% 0; }
+    22%, 100% { background-position: -100% 0; }
+}
+
+.galeria-item:hover img { filter: brightness(1.08); }
+
+@media (prefers-reduced-motion: reduce) {
+    .galeria-item::before { animation: none; }
 }
 
 .galeria-item::after {
@@ -1057,21 +1071,24 @@ footer {
 }
 
 .lightbox-caption span {
-    font-size: 0.82rem;
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
     color: var(--accent);
+    margin-bottom: 2px;
 }
 
 .lightbox-caption a {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    margin-top: 14px;
+    margin-top: 10px;
     background: var(--whatsapp);
     color: white;
     text-decoration: none;
-    padding: 14px 28px;
+    padding: 9px 18px;
     border-radius: 100px;
-    font-size: 1rem;
+    font-size: 0.86rem;
     font-weight: 700;
     box-shadow: 0 4px 14px rgba(37,211,102,0.4);
     transition: all 0.22s;
@@ -1083,7 +1100,35 @@ footer {
     box-shadow: 0 6px 20px rgba(37,211,102,0.5);
 }
 
-.lightbox-caption a i { font-size: 1.15rem; }
+.lightbox-caption a i { font-size: 1rem; }
+
+/* Outras fotos da moto na foto ampliada (v1.11). Só existe quando a moto tem
+   mais de uma foto; com uma só, o bloco nem é criado. */
+.lightbox-fotos {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.lightbox-fotos img {
+    width: 84px;
+    height: 63px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 2px solid rgba(255,255,255,0.25);
+    cursor: pointer;
+    opacity: 0.75;
+    transition: all 0.2s;
+}
+
+.lightbox-fotos img:hover { opacity: 1; }
+.lightbox-fotos img.ativa { opacity: 1; border-color: var(--accent); }
+
+@media (max-width: 600px) {
+    .lightbox-fotos img { width: 72px; height: 54px; }
+    .lightbox img { max-height: 62vh; }
+}
 
 /* =============================================
    AVISO CONDIÇÕES / PARCELA INFO
@@ -1202,25 +1247,6 @@ footer {
     color: white;
     font-size: 0.92rem;
     display: flex;
-    gap: 14px;
-    background: rgba(255,255,255,0.06);
-    border-radius: var(--radius-sm);
-    padding: 14px 16px;
-    border-left: 3px solid rgba(255,255,255,0.15);
-}
-
-.plano-etapa.etapa-destaque {
-    background: rgba(255,255,255,0.15);
-    border-left-color: var(--accent);
-}
-
-.etapa-num {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: var(--secondary);
-    color: white;
-    font-weight: 800;
     align-items: center;
     gap: 8px;
     flex-wrap: wrap;
@@ -1323,14 +1349,104 @@ footer {
     transition: background 0.3s;
 }
 
-/* Mobile: imagem 4:3 ajustada sem cortar */
+/* =============================================
+   TOPO (v1.7)
+   A foto é um <img class="hero-foto"> no HTML (o Google lê imagem do HTML,
+   não lê fundo de CSS). Ela aparece SEMPRE INTEIRA e começa abaixo do menu
+   fixo (68px), pra nada ficar escondido atrás dele.
+   ============================================= */
+
+.hero {
+    background-image: none;
+    background-color: #0a0e1a;
+}
+
+.hero-foto { display: block; }
+
+/* Selo de horário preso no topo da foto (68px do menu + 16px de folga) */
+.hero-badge {
+    position: absolute;
+    top: 84px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* "Financiamento para negativados!" agora vem ANTES do título.
+   Fundo escuro pra não sumir quando cai em cima das letras brancas da placa */
+.hero-negativado {
+    margin-bottom: 18px;
+    background: rgba(10, 14, 26, 0.65);
+    border-color: rgba(255, 204, 0, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+/* ---------- PC ---------- */
+@media (min-width: 769px) {
+    /* Laterais: a mesma foto ampliada, desfocada e escurecida (no lugar do branco) */
+    .hero::before {
+        content: '';
+        position: absolute;
+        inset: -40px;               /* sobra pra borda do desfoque não aparecer */
+        background: url('../img/planoDeFundo2.webp') center / cover no-repeat;
+        filter: blur(30px) brightness(0.45);
+        z-index: 0;
+    }
+
+    /* Foto nítida, centralizada.
+       AJUSTE FINO: o aspect-ratio controla o quanto a foto "abre" pros lados.
+       - 1.14 = foto inteira, sem corte nenhum (largura natural dela)
+       - 1.36 = cerca de 20% mais larga, corta uma faixa embaixo (valor atual)
+       - quanto maior o número, mais larga e mais corte embaixo */
+    .hero-foto {
+        position: absolute;
+        top: 68px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: calc(100% - 68px);
+        aspect-ratio: 1.36;
+        max-width: 100%;
+        object-fit: cover;
+        object-position: center 15%;    /* segura a placa em cima; o corte vai pra baixo */
+        z-index: 0;
+    }
+
+    /* Bloco de texto mais baixo: termina logo acima dos retrovisores das motos.
+       AJUSTE FINO: o 0.24 é a distância do fim dos botões até o pé da foto,
+       em fração da altura da foto. Maior = sobe; menor = desce. */
+    .hero {
+        align-items: flex-end;
+        padding-bottom: calc((100svh - 68px) * 0.24);
+    }
+
+    /* Título e botões menores no PC */
+    .hero h1 {
+        font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+        margin-bottom: 22px;
+    }
+
+    .hero-buttons .btn {
+        padding: 12px 22px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ---------- CELULAR ----------
+   Foto e texto ocupam a MESMA célula do grid: a altura do topo passa a ser a
+   altura da própria foto (inteira, sem corte) e o texto fica por cima dela. */
 @media (max-width: 768px) {
     .hero {
-        background-size: 100% auto;
-        background-position: center top;
-        background-color: #0a0e1a;
+        display: grid;
         min-height: auto;
-        padding: 90px 18px 50px;
+        padding: 68px 0 0;
+    }
+
+    .hero-foto {
+        grid-area: 1 / 1;
+        width: 100%;
+        height: auto;
     }
 
     .hero::before {
@@ -1339,16 +1455,139 @@ footer {
         inset: 0;
         background: linear-gradient(
             to bottom,
-            rgba(10, 14, 26, 0.45) 0%,
-            rgba(10, 14, 26, 0.15) 30%,
-            rgba(10, 14, 26, 0.30) 60%,
-            rgba(10, 14, 26, 0.75) 100%
+            rgba(10, 14, 26, 0.35) 0%,
+            rgba(10, 14, 26, 0.05) 25%,
+            rgba(10, 14, 26, 0.15) 45%,
+            rgba(10, 14, 26, 0.80) 70%,
+            rgba(10, 14, 26, 1) 85%
         );
         z-index: 0;
     }
 
-    .hero-content {
+    /* O .hero-content "some" do layout e os filhos dele viram itens do grid:
+       linha 1 = foto com a chamada (selo amarelo + título) presa no pé dela;
+       linha 2 = faixa escura com os botões, sem tampar a foto. */
+    .hero-content { display: contents; }
+
+    .hero-chamada {
+        grid-area: 1 / 1;
+        align-self: end;
         position: relative;
         z-index: 1;
+        padding: 0 16px 14px;
     }
+
+    .hero-buttons {
+        grid-row: 2;
+        position: relative;
+        z-index: 1;
+        padding: 14px 16px 40px;    /* 40px embaixo: espaço do degradê pro branco */
+    }
+
+    .hero-badge {
+        top: 78px;
+        font-size: 0.66rem;
+        padding: 5px 12px;
+    }
+
+    .hero h1 {
+        font-size: clamp(1.7rem, 7.4vw, 2.1rem);
+        margin-bottom: 14px;
+    }
+
+    .hero-negativado {
+        font-size: 0.78rem;
+        padding: 4px 12px;
+        margin-bottom: 12px;
+    }
+
+    .hero-buttons { gap: 10px; }
+
+    .hero-buttons .btn {
+        padding: 13px 20px;
+        font-size: 0.88rem;
+    }
+}
+
+/* =============================================
+   COMPRA PROGRAMADA: FUNDO ESCURO (v1.7)
+   Mesma cor da galeria de estoque e do rodapé (var(--dark) = #111827)
+   ============================================= */
+
+.compra-section { background: var(--dark); }
+
+.compra-section .section-title { color: #fff; }
+.compra-section .section-subtitle { color: rgba(255,255,255,0.6); }
+
+.compra-texto h3 { color: #fff; text-align: center; }
+.compra-texto > p { color: rgba(255,255,255,0.7); text-align: center; }
+.compra-texto > p strong { color: #fff; }
+
+.vantagem-item { background: var(--dark-2); }
+.vantagem-item h4 { color: #fff; }
+.vantagem-item p { color: rgba(255,255,255,0.6); }
+
+/* Texto das etapas um pouco maior: em 0.84rem e negrito o pingo do "i"
+   grudava e "sai" parecia "sal" */
+.etapa-texto p { font-size: 0.92rem; }
+.valor-destaque,
+.valor-verde { letter-spacing: 0.01em; }
+
+/* Etapa 3 (retirar a moto) em VERDE */
+.plano-etapa.etapa-destaque {
+    background: rgba(34,197,94,0.12);
+    border-left-color: #22c55e;
+}
+.etapa-destaque .etapa-num {
+    background: #16a34a;
+    color: #fff;
+}
+.valor-verde {
+    color: #4ade80;
+    font-weight: 700;
+}
+
+/* =============================================
+   OFERTAS: EFEITOS (v1.7)
+   - brilho que passa pela foto de cada card de tempos em tempos
+   - selo (SEMINOVA / LANÇAMENTO / ELÉTRICA) pulsando de leve
+   - carrossel girando sozinho (autoplay no script.js)
+   ============================================= */
+
+.moto-card { position: relative; }
+
+.moto-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 220px;                  /* mesma altura da foto do card */
+    background: linear-gradient(105deg, transparent 0%, rgba(255,255,255,0.45) 50%, transparent 100%);
+    transform: skewX(-20deg);
+    animation: oferta-brilho 4.5s ease-in-out infinite;
+    pointer-events: none;           /* não atrapalha o clique na foto */
+}
+
+.swiper-slide:nth-child(even) .moto-card::after { animation-delay: 1.6s; }
+
+@keyframes oferta-brilho {
+    0%        { left: -75%; }
+    30%, 100% { left: 130%; }
+}
+
+.moto-badge {
+    align-self: center;             /* vira pílula no centro (antes esticava a largura toda do card) */
+    animation: oferta-pulso 2.2s ease-in-out infinite;
+}
+
+@keyframes oferta-pulso {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.08); }
+}
+
+/* Quem configurou o celular/PC pra reduzir animações não vê os efeitos */
+@media (prefers-reduced-motion: reduce) {
+    .moto-card::after,
+    .moto-badge { animation: none; }
 }
