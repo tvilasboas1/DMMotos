@@ -2,7 +2,7 @@
 
 **Status:** Site no ar
 **Endereço:** https://www.dmmotos.com.br
-**Última atualização:** 12/10/2026 (v1.11)
+**Última atualização:** 18/10/2026 (v1.13)
 
 ## TECNOLOGIAS
 - HTML5
@@ -45,6 +45,7 @@
             │   ├── Biz/
             │   ├── Bros/       (vazia)
             │   ├── Fan/
+            │   ├── Scooter/    (PCX)
             │   ├── Titan/
             │   └── Twister/    (vazia)
             └── Yamaha/
@@ -116,38 +117,42 @@ Modelo de bloco da galeria:
 
 ---
 
-## ESTOQUE ATUAL (12/10/2026, conferido com o WhatsApp)
+## ESTOQUE ATUAL (18/10/2026, conferido com o WhatsApp)
 
-20 motos. Preços conforme o catálogo do WhatsApp (a galeria do site não exibe preço).
+24 motos no site. Preços conforme o catálogo do WhatsApp (a galeria do site não exibe preço).
 
 | # | Moto | Ano | Preço WhatsApp | Foto |
 |---|------|-----|----------------|------|
 | 1 | Honda Biz 125 preta | 2014 | R$ 13.000,00 | `Honda/Biz/Honda Biz 125 Preta 2014-2014.jpeg` |
 | 2 | Honda Biz 125 branca | 2015 | R$ 14.000,00 | `Honda/Biz/Honda Biz 125 branca 2015-2015.jpeg` |
-| 3 | Honda Biz 125 vermelha | 2024 | R$ 18.500,00 | `Honda/Biz/Honda Biz 125 vermelha 2024-2024.jpeg` |
-| 4 | Honda Fan 150 Esdi | 2010/2011 | R$ 11.500,00 | `Honda/Fan/Honda Fan 150 Esdi 2010-2011.jpeg` |
-| 5 | Honda CG Fan 150 Esdi preta | 2012 | R$ 11.900,00 | `Honda/Fan/Honda Cg Fan 150 Esdi preta 2012-2012.jpeg` |
-| 6 | Honda Fan 150 Esdi | 2013/2014 | R$ 12.500,00 | `Honda/Fan/Honda Fan 150 Esdi 2013-2014.jpeg` |
-| 7 | Honda Fan 160 vermelha | 2018 | R$ 14.500,00 | `Honda/Fan/Honda Fan 160 vermelha 2018-2018.jpeg` |
-| 8 | Honda Fan 160 vermelha | 2025 | R$ 19.900,00 | `Honda/Fan/Honda Fan 160 vermelha 2025-2025.jpeg` |
-| 9 | Honda CG Titan 150 vermelha | 2007 | R$ 9.500,00 | `Honda/Titan/Honda Cg Titan 150 Vermelha 2007-2007.jpeg` |
-| 10 | Yamaha Factor 150 preta | 2018 | R$ 12.500,00 | `Yamaha/Factor/Yamaha Factor 150  preta 2018-2018.jpeg` (nome com 2 espaços) |
-| 11 | Yamaha Factor 150 preta | 2022/2023 | R$ 15.000,00 | `Yamaha/Factor/Yamaha Factor 150 preta 2022-2023.jpeg` |
-| 12 | Yamaha Fazer 250 azul | 2022/2023 | R$ 23.000,00 | `Yamaha/Fazer/Yamaha Fazer 250 Azul 2022-2023.jpeg` |
-| 13 | Yamaha Fazer 250 | 2023/2024 | R$ 23.500,00 | `Yamaha/Fazer/Yamaha Fazer 250 2023-2024.jpeg` |
-| 14 | Yamaha Fz25 | 2022/2023 | R$ 23.000,00 | `Yamaha/Fazer/Yamaha Fz25 2022-2023.jpeg` |
-| 15 | Yamaha Xtz 125 K preta | 2004/2005 | R$ 9.000,00 | `Yamaha/XTZ/Xtz 125 K preta 2004-2005.jpeg` |
-| 16 | Yamaha Xtz 150 Crosser S | 2021/2022 | R$ 16.900,00 | `Yamaha/XTZ/Yamaha Xtz 150 Crosser S 2021-2022.jpeg` |
-| 17 | Bolin 1822 elétrica | | R$ 8.500,00 | `eletricas/bolin-1822-eletrica.jpeg` |
-| 18 | Bolin 1970 elétrica | | R$ 10.000,00 | `eletricas/bolin-1970-eletrica.jpeg` |
-| 19 | Wd2S elétrica | | R$ 9.250,00 | `eletricas/wd2s-eletrica.jpeg` |
-| 20 | Gt Hitway elétrica | | R$ 11.500,00 | `eletricas/gt-hitway-eletrica.jpeg` |
+| 3 | Honda Biz 125 prata (nova em 18/10) | 2019 | R$ 15.000,00 | `Honda/Biz/Honda Biz 125  Prata 2019-2019.jpeg` (nome com 2 espaços) |
+| 4 | Honda Biz 125 vermelha | 2024 | R$ 18.500,00 | `Honda/Biz/Honda Biz 125 vermelha 2024-2024.jpeg` |
+| 5 | Honda Fan 125 vermelha (nova em 18/10) | 2006 | R$ 7.500,00 | `Honda/Fan/Honda Fan 125 vemelha 2006-2006.jpeg` ("vemelha" no nome do arquivo) |
+| 6 | Honda Fan 150 Esdi | 2010/2011 | R$ 11.500,00 | `Honda/Fan/Honda Fan 150 Esdi 2010-2011.jpeg` |
+| 7 | Honda CG Fan 150 Esdi preta | 2012 | R$ 11.900,00 | `Honda/Fan/Honda Cg Fan 150 Esdi preta 2012-2012.jpeg` |
+| 8 | Honda Fan 150 Esdi | 2013/2014 | R$ 13.000,00 (era 12.500,00) | `Honda/Fan/Honda Fan 150 Esdi 2013-2014.jpeg` |
+| 9 | Honda Fan 160 vermelha | 2018 | R$ 14.500,00 | `Honda/Fan/Honda Fan 160 vermelha 2018-2018.jpeg` |
+| 10 | Honda Fan 160 vermelha | 2025 | R$ 19.900,00 | `Honda/Fan/Honda Fan 160 vermelha 2025-2025.jpeg` |
+| 11 | Honda CG Titan 150 vermelha | 2007 | R$ 9.500,00 | `Honda/Titan/Honda Cg Titan 150 Vermelha 2007-2007.jpeg` |
+| 12 | Honda PCX 150 prata (nova em 18/10) | 2017/2018 | R$ 12.500,00 | `Honda/Scooter/Honda PCX 150 Prata 2017-2018.jpeg` |
+| 13 | Yamaha Factor 150 preta | 2018 | R$ 12.500,00 | `Yamaha/Factor/Yamaha Factor 150  preta 2018-2018.jpeg` (nome com 2 espaços) |
+| 14 | Yamaha Factor 150 preta | 2022/2023 | R$ 15.000,00 | `Yamaha/Factor/Yamaha Factor 150 preta 2022-2023.jpeg` |
+| 15 | Yamaha Fazer 250 roxa (nova em 18/10) | 2012/2013 | R$ 13.000,00 | `Yamaha/Fazer/Yamaha Fazer 250 Roxa 2012-2013.jpeg` |
+| 16 | Yamaha Fazer 250 azul | 2022/2023 | R$ 23.000,00 | `Yamaha/Fazer/Yamaha Fazer 250 Azul 2022-2023.jpeg` |
+| 17 | Yamaha Fazer 250 | 2023/2024 | R$ 23.500,00 | `Yamaha/Fazer/Yamaha Fazer 250 2023-2024.jpeg` |
+| 18 | Yamaha Fz25 | 2022/2023 | R$ 23.000,00 | `Yamaha/Fazer/Yamaha Fz25 2022-2023.jpeg` |
+| 19 | Yamaha Xtz 125 K preta | 2004/2005 | R$ 9.000,00 | `Yamaha/XTZ/Xtz 125 K preta 2004-2005.jpeg` |
+| 20 | Yamaha Xtz 150 Crosser S | 2021/2022 | R$ 16.900,00 | `Yamaha/XTZ/Yamaha Xtz 150 Crosser S 2021-2022.jpeg` |
+| 21 | Bolin 1822 elétrica (fora do catálogo, ver pendências) |  | R$ 8.500,00 | `eletricas/bolin-1822-eletrica.jpeg` |
+| 22 | Bolin 1970 elétrica (fora do catálogo, ver pendências) |  | R$ 10.000,00 | `eletricas/bolin-1970-eletrica.jpeg` |
+| 23 | Wd2S elétrica (fora do catálogo, ver pendências) |  | R$ 9.250,00 | `eletricas/wd2s-eletrica.jpeg` |
+| 24 | Gt Hitway elétrica (fora do catálogo, ver pendências) |  | R$ 11.500,00 | `eletricas/gt-hitway-eletrica.jpeg` |
 
 Condições informadas no catálogo do WhatsApp:
 - Fan 160 2018: entrada de R$ 8.500,00 + restante em até 10x de R$ 900,00 (outras opções em 12x).
 - Factor 150 2022/2023: entrada de R$ 9.000,00 + restante em até 10x de R$ 900,00 (outras opções em 12x).
 
-**Carrossel de Ofertas (5 cards):** Biz 125 2024, Fazer 250 2023/2024, Fan 160 2025, Bolin 1970, Wd2S.
+**Carrossel de Ofertas (5 cards):** Biz 125 2024, Fazer 250 2023/2024, Fan 160 2025, Bolin 1970, PCX 150 2017/2018.
 
 ---
 
@@ -176,6 +181,9 @@ Observações:
 
 ## PENDÊNCIAS
 
+- [ ] **Elétricas** (Bolin 1822, Bolin 1970, Wd2S, Gt Hitway): não estavam no catálogo do WhatsApp em 18/10/2026. Confirmar com a loja se foram vendidas. Se sim: tirar os 4 blocos da galeria, trocar a Bolin 1970 no carrossel e apagar as fotos de `assets/img/motoscarrocel/eletricas/`.
+- [ ] Site com 24 motos, acima das 20 sugeridas por estética.
+
 - [ ] Confirmar a foto da Fazer 250 2022/2023: o site usa a `Azul`. A `Yamaha Fazer 250 2022-2023.jpeg` (sem cor) ficou sem uso; apagar se for duplicada.
 - [ ] Datas do CHANGELOG (v0.5 a v1.1 marcadas como 2025) não batem com o rodapé ("Landing Page criada em Abril de 2026"). Confirmar o ano certo.
 
@@ -183,7 +191,20 @@ Observações:
 
 ## CHANGELOG
 
-### v1.11 - 12/10/2026 (Atual)
+### v1.13 - 18/10/2026 (Atual)
+**Tema:** Fotos novas com os nomes reais da pasta + PCX no carrossel
+- Galeria aponta para os arquivos como foram salvos: `Honda/Scooter/Honda PCX 150 Prata 2017-2018.jpeg`, `Honda/Biz/Honda Biz 125  Prata 2019-2019.jpeg`, `Honda/Fan/Honda Fan 125 vemelha 2006-2006.jpeg`, `Yamaha/Fazer/Yamaha Fazer 250 Roxa 2012-2013.jpeg`; textos alternativos com a cor
+- Carrossel: Honda PCX 150 2017/2018 entrou no lugar da Wd2S (a Bolin 1970 continua)
+- Conferido com o catálogo de 18/10: nenhuma moto a gasolina vendida desde 12/10
+
+### v1.12 - 18/10/2026
+**Tema:** Estoque atualizado com o catálogo do WhatsApp de 18/10/2026
+- Galeria: entraram Honda Fan 125 2006, Honda PCX 150 2017/2018 (grupo novo, pasta `Honda/PCX`), Yamaha Fazer 250 2012/2013 e Honda Biz 125 2019, cada uma entre os pares dela (total 24)
+- Nenhuma moto vendida desde 12/10; as 4 elétricas não aparecem no catálogo e foram mantidas até a loja confirmar
+- JSON-LD do catálogo gerado a partir da galeria (24 itens, mesma ordem do site)
+- README: tabela de estoque com preços de 18/10 (Fan 150 Esdi 2013/2014 passou para R$ 13.000,00)
+
+### v1.11 - 12/10/2026
 **Tema:** Outras fotos na foto ampliada
 - Foto ampliada: quando a moto vem do Portfólio com mais de uma foto, as miniaturas aparecem lado a lado acima do nome; tocar numa troca a foto grande. Com uma foto só, ou nas motos do HTML estático, o bloco nem é criado (sem espaço vazio, sem erro)
 - `estoque.js` passa a lista de fotos (até 3) no atributo `data-fotos` de cada item
