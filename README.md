@@ -2,7 +2,7 @@
 
 **Status:** Site no ar
 **Endereço:** https://www.dmmotos.com.br
-**Última atualização:** 18/10/2026 (v1.13)
+**Última atualização:** 19/10/2026 (v1.14)
 
 ## TECNOLOGIAS
 - HTML5
@@ -36,11 +36,6 @@
         ├── logo-pan.webp
         ├── logo-santander.png
         └── motoscarrocel/
-            ├── eletricas/
-            │   ├── bolin-1822-eletrica.jpeg
-            │   ├── bolin-1970-eletrica.jpeg
-            │   ├── gt-hitway-eletrica.jpeg
-            │   └── wd2s-eletrica.jpeg
             ├── Honda/
             │   ├── Biz/
             │   ├── Bros/       (vazia)
@@ -56,7 +51,6 @@
 
 **Padrão de nome das fotos:** `Marca Modelo Cor AnoFab-AnoMod.jpeg`
 Exemplo: `Honda Fan 160 vermelha 2025-2025.jpeg`, salva em `Honda/Fan/`.
-Elétricas seguem o padrão `modelo-eletrica.jpeg` em `eletricas/`.
 
 ---
 
@@ -117,9 +111,9 @@ Modelo de bloco da galeria:
 
 ---
 
-## ESTOQUE ATUAL (18/10/2026, conferido com o WhatsApp)
+## ESTOQUE ATUAL (19/10/2026, conferido com o WhatsApp)
 
-24 motos no site. Preços conforme o catálogo do WhatsApp (a galeria do site não exibe preço).
+20 motos no site. Preços conforme o catálogo do WhatsApp (a galeria do site não exibe preço).
 
 | # | Moto | Ano | Preço WhatsApp | Foto |
 |---|------|-----|----------------|------|
@@ -143,20 +137,26 @@ Modelo de bloco da galeria:
 | 18 | Yamaha Fz25 | 2022/2023 | R$ 23.000,00 | `Yamaha/Fazer/Yamaha Fz25 2022-2023.jpeg` |
 | 19 | Yamaha Xtz 125 K preta | 2004/2005 | R$ 9.000,00 | `Yamaha/XTZ/Xtz 125 K preta 2004-2005.jpeg` |
 | 20 | Yamaha Xtz 150 Crosser S | 2021/2022 | R$ 16.900,00 | `Yamaha/XTZ/Yamaha Xtz 150 Crosser S 2021-2022.jpeg` |
-| 21 | Bolin 1822 elétrica (fora do catálogo, ver pendências) |  | R$ 8.500,00 | `eletricas/bolin-1822-eletrica.jpeg` |
-| 22 | Bolin 1970 elétrica (fora do catálogo, ver pendências) |  | R$ 10.000,00 | `eletricas/bolin-1970-eletrica.jpeg` |
-| 23 | Wd2S elétrica (fora do catálogo, ver pendências) |  | R$ 9.250,00 | `eletricas/wd2s-eletrica.jpeg` |
-| 24 | Gt Hitway elétrica (fora do catálogo, ver pendências) |  | R$ 11.500,00 | `eletricas/gt-hitway-eletrica.jpeg` |
 
 Condições informadas no catálogo do WhatsApp:
 - Fan 160 2018: entrada de R$ 8.500,00 + restante em até 10x de R$ 900,00 (outras opções em 12x).
 - Factor 150 2022/2023: entrada de R$ 9.000,00 + restante em até 10x de R$ 900,00 (outras opções em 12x).
 
-**Carrossel de Ofertas (5 cards):** Biz 125 2024, Fazer 250 2023/2024, Fan 160 2025, Bolin 1970, PCX 150 2017/2018.
+**Carrossel de Ofertas (5 cards):** Biz 125 2024, Fazer 250 2023/2024, Fan 160 2025, Biz 125 2019, PCX 150 2017/2018.
 
 ---
 
 ## BAIXAS DE ESTOQUE (motos vendidas)
+
+### 19/10/2026 (elétricas devolvidas)
+As 4 elétricas eram consignadas e foram devolvidas ao dono. Saíram da galeria, do carrossel e dos textos de SEO; fotos apagadas da pasta (`rm`) junto com a pasta `eletricas/`.
+
+| # | Moto | Preço que estava no site | Arquivo removido |
+|---|------|--------------------------|------------------|
+| 1 | Bolin 1822 elétrica | R$ 8.500,00 | `eletricas/bolin-1822-eletrica.jpeg` |
+| 2 | Bolin 1970 elétrica | R$ 10.000,00 | `eletricas/bolin-1970-eletrica.jpeg` |
+| 3 | Wd2S elétrica | R$ 9.250,00 | `eletricas/wd2s-eletrica.jpeg` |
+| 4 | Gt Hitway elétrica | R$ 11.500,00 | `eletricas/gt-hitway-eletrica.jpeg` |
 
 ### 12/10/2026
 Critério: estavam na galeria do site e não constavam mais no catálogo do WhatsApp. Fotos apagadas da pasta (`rm`). O site não exibia preço na galeria, então não há valor registrado.
@@ -181,8 +181,6 @@ Observações:
 
 ## PENDÊNCIAS
 
-- [ ] **Elétricas** (Bolin 1822, Bolin 1970, Wd2S, Gt Hitway): não estavam no catálogo do WhatsApp em 18/10/2026. Confirmar com a loja se foram vendidas. Se sim: tirar os 4 blocos da galeria, trocar a Bolin 1970 no carrossel e apagar as fotos de `assets/img/motoscarrocel/eletricas/`.
-- [ ] Site com 24 motos, acima das 20 sugeridas por estética.
 
 - [ ] Confirmar a foto da Fazer 250 2022/2023: o site usa a `Azul`. A `Yamaha Fazer 250 2022-2023.jpeg` (sem cor) ficou sem uso; apagar se for duplicada.
 - [ ] Datas do CHANGELOG (v0.5 a v1.1 marcadas como 2025) não batem com o rodapé ("Landing Page criada em Abril de 2026"). Confirmar o ano certo.
@@ -191,7 +189,14 @@ Observações:
 
 ## CHANGELOG
 
-### v1.13 - 18/10/2026 (Atual)
+### v1.14 - 19/10/2026 (Atual)
+**Tema:** Elétricas saem do site (consignadas, devolvidas ao dono)
+- Galeria: saíram Bolin 1822, Bolin 1970, Wd2S e Gt Hitway (total 20)
+- Carrossel: Honda Biz 125 2019 entrou no lugar da Bolin 1970
+- Textos de SEO (description, og, twitter, keywords) sem "elétricas"
+- JSON-LD com as 20 motos
+
+### v1.13 - 18/10/2026
 **Tema:** Fotos novas com os nomes reais da pasta + PCX no carrossel
 - Galeria aponta para os arquivos como foram salvos: `Honda/Scooter/Honda PCX 150 Prata 2017-2018.jpeg`, `Honda/Biz/Honda Biz 125  Prata 2019-2019.jpeg`, `Honda/Fan/Honda Fan 125 vemelha 2006-2006.jpeg`, `Yamaha/Fazer/Yamaha Fazer 250 Roxa 2012-2013.jpeg`; textos alternativos com a cor
 - Carrossel: Honda PCX 150 2017/2018 entrou no lugar da Wd2S (a Bolin 1970 continua)
