@@ -2,7 +2,8 @@
 
 **Status:** Site no ar
 **Endereço:** https://www.dmmotos.com.br
-**Última atualização:** 19/10/2026 (v1.14)
+**Última atualização:** 19/10/2026 (v1.15)
+**Estoque:** desde a v1.15 a galeria e o carrossel vêm do **Portfólio**, o sistema interno de estoque da loja (repositório privado separado). O HTML escrito à mão virou **reserva**: só aparece se o Portfólio não responder.
 
 ## TECNOLOGIAS
 - HTML5
@@ -10,6 +11,7 @@
 - JavaScript (Vanilla)
 - Swiper.js (Carrossel)
 - Font Awesome (Ícones)
+- Estoque dinâmico: `assets/js/estoque.js` lê a API do Portfólio (endereço na meta `portfolio-api`)
 
 ---
 
@@ -26,7 +28,7 @@
     │   └── style.css
     ├── js/
     │   ├── script.js
-    │   └── estoque.js   (estoque dinâmico; só age se a meta portfolio-api estiver preenchida)
+    │   └── estoque.js   (lê o estoque do Portfólio; meta portfolio-api preenchida desde a v1.15)
     └── img/
         ├── dmlogo.png
         ├── planoDeFundo1.jpeg      (sem uso)
@@ -49,7 +51,7 @@
                 └── XTZ/
 ```
 
-**Padrão de nome das fotos:** `Marca Modelo Cor AnoFab-AnoMod.jpeg`
+**Padrão de nome das fotos (só da reserva):** `Marca Modelo Cor AnoFab-AnoMod.jpeg`. As fotos que o site mostra no dia a dia ficam no Portfólio, não nesta pasta.
 Exemplo: `Honda Fan 160 vermelha 2025-2025.jpeg`, salva em `Honda/Fan/`.
 
 ---
@@ -59,11 +61,12 @@ Exemplo: `Honda Fan 160 vermelha 2025-2025.jpeg`, salva em `Honda/Fan/`.
 O site fica na **Cloudflare Pages**, ligado ao repositório do GitHub: todo `push` na branch principal publica sozinho.
 
 1. Testar local, de dentro da pasta do projeto: `python3 -m http.server 8000` e abrir `http://localhost:8000` (Ctrl+Shift+R depois de cada mudança; conferir também no modo celular do navegador)
-2. Conferir o que vai subir: `git status` (não deixar zip de pacote nem arquivo de teste entrar)
-3. `git add -A` e `git commit -m "vX.Y: o que mudou"`
-4. `git push` (ou Sync no VS Code)
-5. Acompanhar o deploy no painel da Cloudflare (Workers & Pages) e abrir https://www.dmmotos.com.br com Ctrl+Shift+R
-6. Se a prévia do link no WhatsApp não atualizar, forçar no Depurador de Compartilhamento do Facebook (https://developers.facebook.com/tools/debug/), botão "Coletar novamente"
+2. **Salvar** os arquivos no VS Code (Ctrl+S; aba sem o círculo branco) e conferir o que vai subir: `git status` (não deixar zip de pacote nem arquivo de teste entrar) e `git diff` (mostra linha por linha o que mudou; se a mudança que você fez não aparecer, o arquivo não foi salvo)
+3. **Conferir a meta do Portfólio antes de todo commit:** `grep -n 'portfolio-api' index.html` tem que mostrar `content="https://painel.dmmotos.com.br"`. Nunca commitar com `127.0.0.1` (teste local) nem vazia (desliga o estoque dinâmico)
+4. `git add -A` e `git commit -m "vX.Y: o que mudou"`
+5. `git push` (ou Sync no VS Code)
+6. Acompanhar o deploy no painel da Cloudflare (Workers & Pages) e abrir https://www.dmmotos.com.br com Ctrl+Shift+R. Costuma publicar em menos de 1 minuto
+7. Se a prévia do link no WhatsApp não atualizar, forçar no Depurador de Compartilhamento do Facebook (https://developers.facebook.com/tools/debug/), botão "Coletar novamente"
 
 ---
 
@@ -78,14 +81,37 @@ O site fica na **Cloudflare Pages**, ligado ao repositório do GitHub: todo `pus
 
 ---
 
-## COMO ATUALIZAR O ESTOQUE (manual)
+## ESTOQUE DINÂMICO (como funciona desde a v1.15)
 
-A fonte da verdade é o **catálogo do WhatsApp** da DM Motos.
+**A fonte da verdade do estoque é o Portfólio** (o painel onde a loja cadastra as motos). Moto nova, vendida, preço, carrossel e selo: tudo se faz lá, **sem mexer neste repositório**. O site reflete em até 1 minuto.
 
-1. Tirar print do catálogo inteiro no WhatsApp.
+O que acontece quando alguém abre o site:
+
+1. O navegador mostra o `index.html` normal, com a **reserva** (as motos escritas à mão na galeria e no carrossel).
+2. O `assets/js/estoque.js` lê a `<meta name="portfolio-api">` do `<head>` e pede o estoque ao Portfólio (`/api/publico/site`).
+3. **Se o Portfólio responder em até 6 segundos**, o script apaga o miolo da galeria (`#estoque .galeria-grid`) e do carrossel (`#ofertas .swiper-wrapper`) e monta tudo de novo com o que veio: nome, ano, preço, selo, condições e até 3 fotos na foto ampliada. Depois recria o carrossel. O resto da página não é tocado.
+4. **Se não responder** (sistema fora do ar, internet ruim, demora acima de 6 s), o script desiste e **a reserva fica na tela**. O visitante não vê erro.
+
+Detalhes:
+- Moto sem foto no Portfólio não aparece no site.
+- O clique no botão do WhatsApp da foto ampliada conta um "interesse" na moto, sem guardar nada de quem clicou.
+- O Google enxerga a **reserva** (e o JSON-LD do `<head>`), não o estoque dinâmico: o Portfólio é fechado para robôs de busca. Por isso vale manter a reserva razoavelmente atualizada.
+- **Desligar o estoque dinâmico numa emergência:** deixar a meta vazia (`content=""`), commit e push. O site volta a ser 100% a reserva.
+
+**Como saber de onde veio uma foto:** botão direito na foto da galeria, "Abrir imagem em nova aba". Endereço começando com `painel.dmmotos.com.br/fotos/` = veio do Portfólio; com `www.dmmotos.com.br/assets/img/` = é a reserva.
+
+**Teste local** com o Portfólio rodando no notebook: trocar a meta para `http://127.0.0.1:8002` **sem commitar**, `python3 -m http.server 8000`, abrir http://localhost:8000, e no fim desfazer com `git checkout index.html`.
+
+---
+
+## COMO ATUALIZAR A RESERVA (manual, de vez em quando)
+
+A reserva só aparece se o Portfólio cair, mas é ela que o Google lê. Vale atualizar de tempos em tempos (por exemplo, uma vez por mês ou depois de muitas vendas). **A referência agora é o Portfólio**, não mais o catálogo do WhatsApp.
+
+1. Abrir o site e anotar o que o Portfólio está mostrando (ou ver no próprio painel).
 2. Cruzar com a galeria do `index.html` (seção `id="estoque"`):
-   - Está no WhatsApp e não está no site: **entrou**. Salvar a foto na pasta da marca/modelo e adicionar um bloco `galeria-item`.
-   - Está no site e não está no WhatsApp: **vendida**. Remover o bloco `galeria-item` e apagar a foto.
+   - Está no Portfólio e não está na reserva: **entrou**. Salvar a foto na pasta da marca/modelo e adicionar um bloco `galeria-item`.
+   - Está na reserva e não está no Portfólio: **vendida**. Remover o bloco `galeria-item` e apagar a foto.
 3. Conferir o carrossel de Ofertas (seção `id="ofertas"`): preço, ano e foto de cada card.
 4. Atualizar a lista do JSON-LD "Estoque de Motos DM Motos" no `<head>` (usada pelo Google) e o `numberOfItems`.
 5. Rodar a conferência de fotos, de dentro da pasta do projeto:
@@ -111,9 +137,9 @@ Modelo de bloco da galeria:
 
 ---
 
-## ESTOQUE ATUAL (19/10/2026, conferido com o WhatsApp)
+## RESERVA ATUAL (19/10/2026, conferida com o WhatsApp)
 
-20 motos no site. Preços conforme o catálogo do WhatsApp (a galeria do site não exibe preço).
+As 20 motos escritas à mão no `index.html`. Foram as mesmas 20 usadas na carga inicial do Portfólio em 19/10/2026; daqui em diante o estoque de verdade é o do Portfólio. Preços conforme o catálogo do WhatsApp de 18/10/2026 (a galeria não exibe preço).
 
 | # | Moto | Ano | Preço WhatsApp | Foto |
 |---|------|-----|----------------|------|
@@ -148,6 +174,8 @@ Condições informadas no catálogo do WhatsApp:
 
 ## BAIXAS DE ESTOQUE (motos vendidas)
 
+Registro manual até 19/10/2026. Daqui em diante as vendas ficam no Histórico do Portfólio (e o controle de vendas é do MotoGestor); esta seção só volta a receber linhas quando a reserva for atualizada.
+
 ### 19/10/2026 (elétricas devolvidas)
 As 4 elétricas eram consignadas e foram devolvidas ao dono. Saíram da galeria, do carrossel e dos textos de SEO; fotos apagadas da pasta (`rm`) junto com a pasta `eletricas/`.
 
@@ -181,7 +209,9 @@ Observações:
 
 ## PENDÊNCIAS
 
-
+- [ ] Atualizar a reserva do `index.html` e o JSON-LD de tempos em tempos (seção COMO ATUALIZAR A RESERVA). Ideia: um script que gera a reserva a partir do Portfólio.
+- [ ] Faxina de nomes de arquivo da reserva (2 espaços em `Honda Biz 125  Prata 2019-2019.jpeg` e `Yamaha Factor 150  preta 2018-2018.jpeg`; "vemelha" em `Honda Fan 125 vemelha 2006-2006.jpeg`). Ao renomear, trocar também no `index.html` e rodar a conferência de fotos.
+- [ ] Pastas vazias `Honda/Bros/` e `Honda/Twister/`: apagar se não forem usadas.
 - [ ] Confirmar a foto da Fazer 250 2022/2023: o site usa a `Azul`. A `Yamaha Fazer 250 2022-2023.jpeg` (sem cor) ficou sem uso; apagar se for duplicada.
 - [ ] Datas do CHANGELOG (v0.5 a v1.1 marcadas como 2025) não batem com o rodapé ("Landing Page criada em Abril de 2026"). Confirmar o ano certo.
 
@@ -189,7 +219,15 @@ Observações:
 
 ## CHANGELOG
 
-### v1.14 - 19/10/2026 (Atual)
+### v1.15 - 19/10/2026 (Atual)
+**Tema:** Site passa a ler o estoque do Portfólio
+- `<meta name="portfolio-api" content="https://painel.dmmotos.com.br">`: galeria e carrossel vêm do Portfólio (conferido num navegador: as 20 fotos vêm do Portfólio, carrossel na mesma ordem)
+- HTML escrito à mão mantido como reserva (aparece se o Portfólio não responder em 6 s)
+- Fotos das 4 elétricas removidas do repositório (já não eram usadas desde a v1.14)
+- Rodapé 1.15 e `lastmod` do sitemap em 2026-10-19
+- README: seção ESTOQUE DINÂMICO; atualização manual virou "atualizar a reserva"; conferência da meta antes de todo commit
+
+### v1.14 - 19/10/2026
 **Tema:** Elétricas saem do site (consignadas, devolvidas ao dono)
 - Galeria: saíram Bolin 1822, Bolin 1970, Wd2S e Gt Hitway (total 20)
 - Carrossel: Honda Biz 125 2019 entrou no lugar da Bolin 1970
